@@ -1,14 +1,5 @@
 a:active, a:focus{ outline:none; }
 
-@font-face {
-  font-family: 'WebFont';
-  src: url('trajanpro.eot');
-  src: local('¢'),
-       url('trajanpro.woff') format('woff'),
-       url('trajanpro.ttf') format('truetype'),
-       url('trajanpro.svg#webfont') format('svg');
-}
-
 
 body{
 	font-family: Arial;
@@ -79,12 +70,12 @@ a {
 	
 #menu a{
 	display: block;
-	width: 159px;
+	width: 190px;
 	font-size: 16px;
 	border-right: 1px solid #cecece;
 	float: left;
-	color: #fafbc7;
-	padding-bottom: 3px;
+	color: #666;
+	padding: 4px 0 3px 0;
 	margin: 10px 0px 0px 0px;}
 	
 #menu a:hover{

@@ -1,0 +1,24 @@
+<?php
+$index_html = new html_blokk;
+$menu = filter_input(INPUT_GET, 'menu');
+
+if ($menu)
+{
+	if ($_SESSION["lang"] == 'hu'){
+		$tartalom = $index_html->load_template_file("sablonok/".$menu.".html",$array);}
+	else {
+		$tartalom = $index_html->load_template_file("sablonok/".$menu."_".$_SESSION[lang].".html",$array);
+	}
+}
+else 
+{
+   if ($_SESSION["lang"] == 'hu'){
+		$tartalom = $index_html->load_template_file("sablonok/cimlap.html",$array);}
+   else {
+		$tartalom = $index_html->load_template_file("sablonok/cimlap_".$_SESSION[lang].".html",$array);
+   }
+}	
+
+if ($menu){
+	$menujelolo = ' onload="menujelolo(\''.$menu.'\');"';
+}

@@ -1,0 +1,262 @@
+a:active, a:focus{ outline:none; }
+
+@font-face {
+  font-family: 'WebFont';
+  src: url('trajanpro.eot');
+  src: local('¢'),
+       url('trajanpro.woff') format('woff'),
+       url('trajanpro.ttf') format('truetype'),
+       url('trajanpro.svg#webfont') format('svg');
+}
+
+
+body{
+	font-family: Arial;
+	text-align: center;
+	font-size: 16px;
+	text-decoration: none;
+	color: #454545;
+	background-color: #e9edf0;
+	margin: 0px 0px 0px 0px;
+	background-image: url("webgrafika/hatter.jpg");
+	background-repeat: repeat-x;}
+
+img {
+	border: 0px;}
+	
+a {
+	text-decoration: none;
+	color: #454545;
+	border: 0px;}
+	
+#keret{
+	background-color: #fafbec;
+	width: 960px;
+	margin: 0px auto 20px auto;
+	border: 1px solid #868686;}
+	
+#fejlec{
+	width: 100%;
+	font-size: 20px;
+	background-image: url("webgrafika/4.jpg");
+	background-repeat: no-repeat;}
+	
+#logo{
+	display: block;
+	font-family: 'WebFont', Times New Roman;
+	width: 360px;
+	line-height: 120%;
+	font-variant: small-caps;
+	font-size: 26px;
+	text-align: left;
+	padding: 14px 0px 14px 30px;
+	background-image: url("webgrafika/homaly2.png");
+	border-bottom-right-radius: 26px;
+	}
+	
+#logo2{
+	display: block;
+	width: 290px;
+	line-height: 120%;
+	font-variant: small-caps;
+	font-size: 24px;
+	text-align: left;
+	float: right;
+	margin: 62px 0px 0px 0px;
+	padding: 14px 0px 14px 30px;
+	background-image: url("webgrafika/homaly.png");
+	border-top-left-radius: 26px;
+	}
+	
+#menu{
+	width: 100%;
+	height: 53px;
+	font-size: 16px;
+	border-top: 0px solid #cecece;
+	border-bottom: 1px solid #4875a7;
+	margin: 120px 0px 0px 0px;
+	background-image: url("webgrafika/homaly3.png")}
+	
+#menu a{
+	display: block;
+	width: 159px;
+	font-size: 16px;
+	border-right: 1px solid #cecece;
+	float: left;
+	color: #fafbc7;
+	padding-bottom: 3px;
+	margin: 10px 0px 0px 0px;}
+	
+#menu a:hover{
+	background-color: #4875a7;
+	color: #fefefe;}
+	
+.almenu{
+	width: 630px;
+	margin-left: -20px;
+	padding: 2px 20px 0px 20px;
+	height: 20px;
+	border-bottom: 2px solid #4e6885;}
+	
+.almenu a {
+	text-decoration: none;
+	display: block;
+	float: left;
+	height: 20px;
+	margin: -3px 2px 0px 2px;
+	padding: 3px 10px 2px 10px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	text-align: center;
+	background-color: #4e6885;}
+	
+.almenu a:hover {
+	background-color: #597696;}
+	
+#belsosav{
+	width: 100%;
+	min-height: 300px;
+	_height: 300px;}
+
+#jobbsav{
+	border-left: 1px solid #cecece;
+	float: right;
+	margin: 30px 10px 10px 1px;
+	width: 235px;
+	text-align: center;}
+	
+#jobbsav img{
+	width: 190px;
+	margin: 10px auto 10px auto;}
+	
+#jobbsav p{
+	margin: 30px auto 10px auto;
+	font-size: 12px;}
+	
+.oldalmenu a{
+	font-size: 14px;
+	margin: 20px auto 20px auto;
+	clear: both;
+	float: none;}
+	
+.oldalmenu a:hover{
+	color: #FA8F09;}
+	
+#jobbsav h2{
+	margin: 30px auto 10px auto;
+	text-align: center;
+	font-size: 15px;
+	}
+	
+#tartalomsav{
+	float: left;
+	margin: 0px 0px 0px 0px;
+	width: 710px;}
+	
+#tartalomsav h2{
+	font-weight: normal;}
+	
+#tartalomsav h5{
+	clear: both;
+	font-weight: bold;
+	font-size: 16px;}
+	
+.tartalomsav_blokk{
+	text-align: justify;
+	width: 630px;
+	margin: 30px 40px 30px 40px;}
+	
+#tartalomsav img{
+	border: 1px solid #868686;}
+
+#tartalomsav a{
+	color: #4A6582;
+	text-decoration: underline;}
+	
+#tartalomsav a:hover{
+	color: #FA8F09;}
+	
+#tartalomsav h3, h4{
+	margin: 0px;
+	display: block;
+	width: 150px;
+	height: 20px;
+	float: left;
+	font-weight: normal;
+	font-size: 16px;}
+	
+#tartalomsav h3{
+	width: 170px;}
+	
+#tartalomsav h4{
+	width: 400px;}
+	
+#tartalomsav li{
+	margin-top: 10px;}
+	
+#referenciak{
+	margin: 30px 0px 30px 0px;
+	text-decoration: none;}
+	
+#referenciak a{
+	text-decoration: none;}
+		
+.referencia_link{
+	text-decoration: none;
+	display: block;
+	height: 185px;
+	width: 198px;
+	margin: 10px 5px 10px 5px;
+	float: left;
+	font-size: 14px;
+	text-align: center;}
+	
+.referencia_link:hover{
+	margin: 9px 4px 9px 4px;
+	background-color: #FBF6E9;
+	border: 1px solid #dedede;
+	color: #868686;}
+	
+#referenciak img{
+	margin-top: 5px;
+	width: 180px;
+	height: 130px;
+	float: none;
+	}
+	
+#referenciak span{
+	display: block;
+	margin-top: 6px;}
+
+	
+.kapcsolat{
+	display: block;
+	width: 150px;
+	text-align: center;
+	margin: 20px auto 20px auto;
+	padding: 5px 0px 5px 0px;
+	font-size: 18px;
+	border-bottom: 1px solid #cecece;
+	border-top: 1px solid #cecece;
+}
+
+#email h3{
+	clear: both;}
+	
+#lablec{
+	width: 100%;
+	height: 50px;
+	color: #fefefe;
+	background-color: #d5d5d5;
+	padding-top: 8px;
+	background-position: top left;
+	background-image: url("webgrafika/hatter.jpg");
+	background-repeat: repeat-x;}
+	
+#change_css{
+	position: absolute;
+	width: 80px;
+	height: 40px;
+	background-color: fefefe;
+	bottom: 10px;
+	right: 20px;}

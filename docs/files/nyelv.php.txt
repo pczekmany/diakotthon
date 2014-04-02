@@ -1,0 +1,9 @@
+<?php
+if ($_REQUEST['lang'] != ''){
+	$_SESSION["lang"] = $_REQUEST[lang];
+} else {
+	if ($_SESSION["lang"] == ''){
+		$_SESSION["lang"] = 'hu';
+	}
+}
+?>

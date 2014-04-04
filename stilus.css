@@ -170,8 +170,8 @@ a {
 #tartalomsav a:hover{
 	color: #FA8F09;}
 	
-#tartalomsav h3, h4{
-	margin: 0px;
+#tartalomsav h3, h4, h6{
+	margin: 5px 0px 0px 0px;
 	display: block;
 	width: 150px;
 	height: 20px;
@@ -180,11 +180,11 @@ a {
 	font-size: 16px;}
 	
 #tartalomsav h3{
-	width: 170px;}
-	
-#tartalomsav h4{
 	width: 400px;}
-	
+#tartalomsav h4{
+	width: 200px;}
+#tartalomsav h6{
+	width: 600px;}
 #tartalomsav li{
 	margin-top: 10px;}
 	

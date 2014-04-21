@@ -1,12 +1,97 @@
 <?php
 
+
+class data_connect{ //ez egy osztály, csak terv
+	public $domain;    
+
+	function connect(){
+		$domain = $_SERVER['HTTP_HOST'];
+		if ($domain == 'localhost'){
+			$kapcsolat = mysql_connect("localhost", LOCALHOST_DB_USER, LOCALHOST_DB_PASSWORD);
+			$adatbazis = mysql_select_db(LOCALHOST_DB_NAME);}
+		else {
+			$kapcsolat = mysql_connect("localhost", DOMAIN_DB_USER, DOMAIN_DB_PASSWORD);
+			$adatbazis = mysql_select_db(DOMAIN_DB_NAME);
+		}
+
+		if (!$kapcsolat) { die('Hiba a MySQL szerverhez kapcsolódás közben: ' . mysql_error());}
+
+		$ekezet = mysql_set_charset("utf8",$kapcsolat);
+
+		if ($_REQUEST[db_save]){
+			backup_tables();
+		 }
+
+		 if ($_REQUEST[db_load]){
+			sql_import("db-backup.sql");
+		 }
+	}
+}
+
+
+class user{
+	public $sorszam;
+	public $nev;
+	public $jog;
+	public $email;
+	public $csoport;
+	public $belephiba;
+	public $html_code;
+
+	function login(){
+		$jel = mysql_real_escape_string($_REQUEST['jelszo']);
+		$azon = mysql_real_escape_string($_REQUEST['azonosito']);
+		if (!$_REQUEST['azonosito']){$azon = $_SESSION["sessfelhasznaloazonosito"];}
+		$jel = md5($jel);
+
+		If ($_REQUEST['logout'] == 1) {
+			unset($_SESSION["sessfelhasznalo"]);
+			unset($_SESSION["sessfelhasznalosorszam"]);
+			unset($_SESSION["sessfelhasznaloazonosito"]);
+			unset($_SESSION["sessfelhasznalojog"]);
+		}
+
+		If ($_REQUEST['azonosito'] != "") {
+			$result = mysql_query("SELECT sorszam, azonosito, jog, email FROM ".$_SESSION[adatbazis_etag]."_regisztralt WHERE azonosito = '$azon' AND jelszo = '$jel'");	
+			$s = mysql_fetch_row($result);
+			$mostlep == 1;
+		} else {
+		   if ($_SESSION[sessfelhasznalosorszam]){
+			$result = mysql_query("SELECT sorszam, azonosito, jog, email FROM ".$_SESSION[adatbazis_etag]."_regisztralt WHERE sorszam = '$_SESSION[sessfelhasznalosorszam]'");	
+			$s = mysql_fetch_row($result);
+		   }
+		}
+			if ($s[2] != ""){
+				$this->sorszam = $s[0];
+				$this->nev = $s[1];
+				$this->jog = $s[2];
+				$this->email = $s[3];
+				$_SESSION["sessfelhasznalo"] = $s[1];
+				$_SESSION["sessfelhasznalosorszam"] = $s[0];
+				$_SESSION["sessfelhasznaloazonosito"] = $s[1];
+				$_SESSION["sessfelhasznalojog"] = $s[2];
+				$_SESSION["sessfelhasznaloemail"] = $s[3];
+				if ($mostlep){
+				  $loging_db = new log_db;
+				  $loging_db->write($_SESSION["sessfelhasznalosorszam"], 'Bejelentkezés');
+				}
+			} else {
+               If ($_REQUEST['azonosito'] != "") {
+				$_SESSION[messagetodiv] = '<p>Figyelem!</p><ul><li>Rossz felhasználónév, vagy jelszó!</li></ul>';
+               }
+			}
+
+	}
+}
+
+
 /**
  * Sablonkezelő
  * 
  */
 
 class html_blokk{
-	
+	public $html_code;
 	/** Sablon állomány és sablon adatok összeillesztése
 	 * 
 	 * @param string $fajlnev A sablon fájl neve
@@ -24,6 +109,7 @@ class html_blokk{
 	 
 			eval("\$tartalom = \"" . addslashes($tartalom) . "\";");
 	 
+			$this->html_code = $tartalom;
 			return $tartalom . "\n";
 		}
  

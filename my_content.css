@@ -1,0 +1,29 @@
+.lapcim {
+	font-family: times new roman;
+	font-size: 26px;
+	color: #443932;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;}
+	
+.kiemelt{
+	font-family: times new roman;
+	font-size: 18px;
+	font-weight: bold;
+	color: #443932;}
+	
+.normal {
+	font-family: times new roman;
+	margin: 15px 0px 15px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 14px;
+	color: #443932;}  
+	
+.normal a {
+	color: #443932;
+	text-decoration: none;}
+	
+.normal a:hover{
+	text-decoration:underline;}
+	
+.normal a:active{
+	text-decoration:underline;}

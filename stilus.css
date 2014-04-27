@@ -233,7 +233,15 @@ a {
 	border-bottom: 1px solid #cecece;
 	border-top: 1px solid #cecece;
 }
-
+#leonardocim{
+	display: block;
+	font-size: 14px;
+	font-style: oblique;
+}
+#leonardoszoveg{
+	display: block;
+	font-size: 13px;
+}
 #email h3{
 	clear: both;}
 	

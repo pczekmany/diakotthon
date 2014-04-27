@@ -137,7 +137,7 @@ a {
 	color: #FA8F09;}
 	
 #jobbsav h2{
-	margin: 30px auto 10px auto;
+	margin: 20px auto 10px auto;
 	text-align: center;
 	font-size: 15px;
 	}
@@ -233,14 +233,46 @@ a {
 	border-bottom: 1px solid #cecece;
 	border-top: 1px solid #cecece;
 }
-#leonardocim{
+#leokep{
 	display: block;
-	font-size: 14px;
-	font-style: oblique;
+	width: 300px;
+        float: left;
+        margin: 10px;
 }
-#leonardoszoveg{
+#leolead{
 	display: block;
 	font-size: 13px;
+        border: 1px solid #cecece;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 5px;
+}
+#leolead img{
+	display: block;
+        width: 150px;
+	opacity: 1;
+        float: top;
+        border: 1px solid #686868;
+        
+}
+#leoszoveg{
+	display: block;
+	font-size: 14px;
+        line-height: 1.5em;
+}
+#cimszoveg{
+	display: block;
+	font-size: 14px;
+        float: left;
+        line-height: 2em;
+}
+#cimszoveg img{
+        display: block;
+	width: 300px;
+        float: left;
+        margin-right: 20px;
+ 
+        
 }
 #email h3{
 	clear: both;}

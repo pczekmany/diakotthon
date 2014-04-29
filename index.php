@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('parameters.php');
+require_once('functions.php');
 require_once('class.php');
 
 //kapcsolat létrehozása az adatbázis szerverrel (class.php)

@@ -28,7 +28,7 @@ If ($_POST['cim'] != "") {
 			else {$ment_hir = 0;}
 		if ($_POST[check_aktiv] == 'on'){$ment_aktiv = 0;}
 			else {$ment_aktiv = 1;}
-		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_szoveg SET tartalom='$_POST[content]', cim='$_POST[cim]', menunev='$_POST[menunev]', sorrend='$_POST[sorrend]', nyelv='$_POST[cikk_nyelv]', archiv='$ment_aktiv', menu_fent='$ment_menu', hir='$ment_hir' WHERE sorszam='$_POST[sorszam]'";
+		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_szoveg SET tartalom='$_POST[content]', bevezeto='$_POST[bevezeto]', cim='$_POST[cim]', menunev='$_POST[menunev]', sorrend='$_POST[sorrend]', nyelv='$_POST[cikk_nyelv]', archiv='$ment_aktiv', menu_fent='$ment_menu', hir='$ment_hir' WHERE sorszam='$_POST[sorszam]'";
 		mysql_query($sql2);
 	} else {
 		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_kategoriak SET szoveg='$_POST[content]' WHERE sorszam='$_REQUEST[kategoria]'";
@@ -38,13 +38,14 @@ If ($_POST['cim'] != "") {
 
 If ($_REQUEST['kategoria'] == "") {
 	If ($_REQUEST[valaszt] != ''){
-		$r = mysql_query("SELECT tartalom, sorszam, cim, menunev, nyelv, menu_fent, archiv, sorrend, hir FROM ".$_SESSION[adatbazis_etag]."_szoveg WHERE sorszam = $_REQUEST[valaszt]");
+		$r = mysql_query("SELECT tartalom, sorszam, cim, menunev, nyelv, menu_fent, archiv, sorrend, hir, bevezeto FROM ".$_SESSION[adatbazis_etag]."_szoveg WHERE sorszam = $_REQUEST[valaszt]");
 		$h = mysql_fetch_row($r);  
 		$szoveg_tartalom = $h[0];
 		$szoveg_nyelv = $h[4];
 		$szoveg_menu = $h[5];
 		$szoveg_archiv = $h[6];
 		$szoveg_hir = $h[8];
+		$szoveg_bevezeto = $h[9];
 		if (($szoveg_nyelv == 'hu') OR ($szoveg_nyelv == '')){ $cikknyelvcombo_hu = 'selected="selected"';}
 		if ($szoveg_nyelv == 'en') { $cikknyelvcombo_en = 'selected="selected"';}
 		if ($szoveg_menu == 1) {$cikkmenu_check = 'checked="checked"';}
@@ -151,7 +152,10 @@ if (($_REQUEST['valaszt'] == '') OR ($_REQUEST['check_torles'] == "on")){
 		
 		<div id="admin_cikkszoveg" style="display: none;">
 		<div class="a_form_beldiv">
-			
+			<p style="font-size: 14px; font-weight: bold; text-align: left;">Bevezető</p>
+			<textarea name="bevezeto" style="width:672px; height:200px;">' . $szoveg_bevezeto . '</textarea>
+			<br style="clear:both;" />
+			<p style="font-size: 14px; font-weight: bold; text-align: left;">Tartalom</p>
 			<textarea name="content" style="width:672px; height:550px;">' . $szoveg_tartalom . '</textarea>
 			<br style="clear:both;" />
 		</div>

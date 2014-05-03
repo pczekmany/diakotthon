@@ -112,257 +112,76 @@ CREATE TABLE `diakotthon_szoveg` (
   `php_file` varchar(200) COLLATE latin2_hungarian_ci DEFAULT NULL,
   PRIMARY KEY (`sorszam`),
   KEY `sorszam` (`sorszam`)
-) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
 
-INSERT INTO diakotthon_szoveg VALUES("41","Rólunk","","<p>A Pflum Loretta Bt. 1996-ban alakult csal&aacute;di v&aacute;llalkoz&aacute;sk&eacute;nt, melynek fő profilja a feh&eacute;rnemű gy&aacute;rt&aacute;s &eacute;s &eacute;rt&eacute;kes&iacute;t&eacute;s volt.</p>
-<p>Feh&eacute;rneműinket saj&aacute;t varrod&aacute;nkban k&eacute;sz&iacute;tj&uuml;k, <span class=\"kiemelt\">kiz&aacute;r&oacute;lag k&uuml;lf&ouml;ldi alapanyagokb&oacute;l</span>. Term&eacute;keink a legszigor&uacute;bb szakmai k&ouml;vetelm&eacute;nyeknek is megfelelnek.</p>
-<p>Term&eacute;ksk&aacute;l&aacute;nkat folyamatosan bővitj&uuml;k, &eacute;s k&ouml;vetj&uuml;k az aktu&aacute;lis divatot. Igyeksz&uuml;nk minden ig&eacute;nyt kiel&eacute;g&iacute;teni az eleg&aacute;nst&oacute;l a h&eacute;tk&ouml;znapi viseletig, S-m&eacute;rettől az extra m&eacute;retig.</p>
-<p>Rem&eacute;lj&uuml;k term&eacute;keink elnyerik majd tetsz&eacute;s&eacute;t!</p>
-<p>Kellemes v&aacute;s&aacute;rl&aacute;st k&iacute;v&aacute;nunk!</p>","rolunk","0","rolunk","0","0","2","hu","2013-03-09 23:14:24","2013-03-09 23:14:24","0000-00-00","0000-00-00","0","Rólunk","37","1","","");
-INSERT INTO diakotthon_szoveg VALUES("42","Mérettáblázat","","<p><meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\" />
-<title>Untitled Document</title>
-</p>
-<table border=\"0\" cellpadding=\"5\" cellspacing=\"0\" style=\"width: 920px;\">
-<tbody>
-<tr>
-<td>
-<p><span class=\"kiemelt\">NŐI</span></p>
-<table align=\"left\" border=\"0\" cellspacing=\"0\" style=\"width: 700px;\"><colgroup> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> </colgroup>
-<tbody>
-<tr>
-<td height=\"17\" width=\"86\"></td>
-<td style=\"text-align: center;\" width=\"86\">XS</td>
-<td style=\"text-align: center;\" width=\"86\">S</td>
-<td style=\"text-align: center;\" width=\"86\">M</td>
-<td style=\"text-align: center;\" width=\"86\">L</td>
-<td style=\"text-align: center;\" width=\"86\">XL</td>
-<td style=\"text-align: center;\" width=\"86\">XXL</td>
-<td style=\"text-align: center;\" width=\"86\">3XL</td>
-<td style=\"text-align: center;\" width=\"86\">4XL</td>
-<td style=\"text-align: center;\" width=\"86\">4XL</td>
-</tr>
-<tr>
-<td height=\"17\"></td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">34</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">36</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">38</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">40</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">42</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">44</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">46</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">48</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\">48</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Mellbőség</td>
-<td style=\"text-align: center;\">80</td>
-<td style=\"text-align: center;\">84</td>
-<td style=\"text-align: center;\">88</td>
-<td style=\"text-align: center;\">92</td>
-<td style=\"text-align: center;\">96</td>
-<td style=\"text-align: center;\">100</td>
-<td style=\"text-align: center;\">104</td>
-<td style=\"text-align: center;\">108</td>
-<td style=\"text-align: center;\">108</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Derék</td>
-<td style=\"text-align: center;\">62</td>
-<td style=\"text-align: center;\">66</td>
-<td style=\"text-align: center;\">70</td>
-<td style=\"text-align: center;\">74</td>
-<td style=\"text-align: center;\">78</td>
-<td style=\"text-align: center;\">82</td>
-<td style=\"text-align: center;\">86</td>
-<td style=\"text-align: center;\">90</td>
-<td style=\"text-align: center;\">90</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Csípő</td>
-<td style=\"text-align: center;\">86</td>
-<td style=\"text-align: center;\">90</td>
-<td style=\"text-align: center;\">94</td>
-<td style=\"text-align: center;\">98</td>
-<td style=\"text-align: center;\">102</td>
-<td style=\"text-align: center;\">106</td>
-<td style=\"text-align: center;\">110</td>
-<td style=\"text-align: center;\">116</td>
-<td style=\"text-align: center;\">116</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Magasság</td>
-<td style=\"text-align: center;\">166</td>
-<td style=\"text-align: center;\">168</td>
-<td style=\"text-align: center;\">168</td>
-<td style=\"text-align: center;\">170</td>
-<td style=\"text-align: center;\">172</td>
-<td style=\"text-align: center;\">172</td>
-<td style=\"text-align: center;\">174</td>
-<td style=\"text-align: center;\">174</td>
-<td style=\"text-align: center;\">174</td>
-</tr>
-</tbody>
-</table>
-</td>
-<td rowspan=\"2\"><span style=\"text-align: left;\"><img alt=\"\" height=\"355\" src=\"images/16.jpg\" width=\"201\" /></span></td>
-</tr>
-<tr>
-<td>
-<p style=\"text-align: left;\"><span class=\"kiemelt\">LÁNY</span></p>
-<table align=\"left\" border=\"0\" cellspacing=\"0\" style=\"width: 700px;\"><colgroup> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> <col width=\"86\" /> </colgroup>
-<tbody>
-<tr>
-<td height=\"17\" style=\"text-align: right;\" width=\"86\"></td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">104</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">110</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">116</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">122</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">128</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">134</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">140</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">146</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">152</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">158</td>
-<td bgcolor=\"#E6E6FF\" style=\"text-align: center;\" width=\"86\">164</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Mellbőség</td>
-<td style=\"text-align: center;\">56</td>
-<td style=\"text-align: center;\">57</td>
-<td style=\"text-align: center;\">58</td>
-<td style=\"text-align: center;\">61</td>
-<td style=\"text-align: center;\">64</td>
-<td style=\"text-align: center;\">67</td>
-<td style=\"text-align: center;\">70</td>
-<td style=\"text-align: center;\">73</td>
-<td style=\"text-align: center;\">76</td>
-<td style=\"text-align: center;\">79</td>
-<td style=\"text-align: center;\">82</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Derék</td>
-<td style=\"text-align: center;\">53</td>
-<td style=\"text-align: center;\">54</td>
-<td style=\"text-align: center;\">55</td>
-<td style=\"text-align: center;\">56,5</td>
-<td style=\"text-align: center;\">58</td>
-<td style=\"text-align: center;\">59,5</td>
-<td style=\"text-align: center;\">61</td>
-<td style=\"text-align: center;\">62,5</td>
-<td style=\"text-align: center;\">64</td>
-<td style=\"text-align: center;\">65,5</td>
-<td style=\"text-align: center;\">67</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Csípő</td>
-<td style=\"text-align: center;\">59</td>
-<td style=\"text-align: center;\">62</td>
-<td style=\"text-align: center;\">63</td>
-<td style=\"text-align: center;\">66</td>
-<td style=\"text-align: center;\">69</td>
-<td style=\"text-align: center;\">72</td>
-<td style=\"text-align: center;\">75</td>
-<td style=\"text-align: center;\">78,5</td>
-<td style=\"text-align: center;\">82</td>
-<td style=\"text-align: center;\">85</td>
-<td style=\"text-align: center;\">89</td>
-</tr>
-<tr>
-<td height=\"17\" style=\"text-align: right;\">Magasság</td>
-<td style=\"text-align: center;\">104</td>
-<td style=\"text-align: center;\">110</td>
-<td style=\"text-align: center;\">116</td>
-<td style=\"text-align: center;\">122</td>
-<td style=\"text-align: center;\">128</td>
-<td style=\"text-align: center;\">134</td>
-<td style=\"text-align: center;\">140</td>
-<td style=\"text-align: center;\">146</td>
-<td style=\"text-align: center;\">152</td>
-<td style=\"text-align: center;\">158</td>
-<td style=\"text-align: center;\">164</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>","merettablazat","0","rolunk","0","0","2","hu","2013-03-09 23:14:34","2013-03-09 23:14:34","0000-00-00","0000-00-00","0","Mérettáblázat","38","1","","");
-INSERT INTO diakotthon_szoveg VALUES("43","Szállítási és fizetési módok","","<p>A, A webáruházat üzemeltető adatai:<br />Pflum Loretta Kft.<br />Cím: 1185 Budapest, Honvéd u. 101. (továbbiakban Szolgáltató)<br />Tel: <em>+</em>36 1 290 5726; +36 30 934 3402<br />Fax: <em>+</em>36 1 290 5726</p>
-<div>B, Vásárló: <br />Aki a Szolgáltató Internetes Szolgáltatását igénybe veszi, azaz a Szolgáltató internetes felületén regisztráltatja magát és /vagy e felületen keresztül árut vásárol, illetve Szolgáltató internetes felületét használja.</div>
-<div> </div>
-<div> </div>
-<div><strong>2.) A Vásárlási Feltételek célja, közzététele és hatálya</strong></div>
-<div> </div>
-<div>A, A Szolgáltató az Internetes Vásárlási szolgáltatás Vásárlási feltételeit azért adta ki, hogy ebben részletesen szabályozza az internetes vásárlási szolgáltatással, illetve a Szolgáltató internetes felületének igénybevételével kapcsolatos feltételeket, a Szolgáltató és a Vásárló jogait, kötelezettségeit, és egyéb Internetes Vásárlási Szolgáltatással összefüggő lényeges körülményeket.</div>
-<div>B, A Vásárlási Feltételek a Szolgáltató és a vele szerződéses kapcsolatba lépő Vásárló között létrejövő jogviszony általános feltételeit tartalmazza. Az itt nem szabályozott kérdéseket illetően a Szolgáltató Internetes Vásárlási Szolgáltatási, illetve internetes felületi szolgáltatási tevékenységére a Magyar Köztársaság hatályos anyagi jogi jogszabályai, így különösen a Polgári Törvénykönyv, valamint a magyar hatósági előírások külön kikötés nélkül is irányadóak. Jogvita esetére a Szolgáltató és a Vásárló egybehangzóan kikötik a Magyar Köztársaság bíróságai joghatóságát, valamint a magyar anyagi és eljárási jogi jogszabályok alkalmazandóságát.</div>
-<div>C, A szolgáltatással kapcsolatos lényeges hírekről, információkról és változásokról a Szolgáltató honlapján ad tájékoztatást. A Szolgáltató jelen szerződés feltételeit egyoldalúan módosíthatja, amely módosítások ezen szerződés új verziójának közzétételétől számított 8 nap elteltével lépnek hatályba. A közzététel ezen internetes felületen kell hogy megtörténjen. Ha a Vásárló a Szolgáltató Internetes Vásárlási Szolgáltatásait továbbra is igénybe veszi, az a módosítás elfogadásának minősül. A Vásárlási Feltételek mindaddig hatályban maradnak, amíg a Szolgáltató az internetes vásárlási szolgáltatást biztosítja.</div>
-<div> </div>
-<div><strong>3.) Vásárlási Feltételek, amelyek alapján a Szolgáltató az Internetes Vásárlási Szolgáltatást nyújtja a Vásárló részére</strong></div>
-<div> </div>
-<div>A, A feltételek minden Vásárlóval szemben érvényesek, és hatályosak. A Szolgáltató Internetes Vásárlási Szolgáltatásának használatával ezeket a szerződéses feltételeket feltétlenül és visszavonhatatlanul kötelezőnek ismeri el. A szerződés területi hatálya Magyarország, azaz a szállítási és számlázási címek kizárólag Magyarország területén lehetnek.<br />B, Jelen szerződésben Vásárlónak a Szolgáltató internetes felületével kapcsolatba lépő természetes személynek minősülnek, és így a Szolgáltató internetes felületével kapcsolatos tevékenységükért személyesen felelősek, függetlenül attól, hogy saját jelszóval azonosították magukat, vagy intézmény ügyfeleként kerültek kapcsolatba a Szolgáltató internetes felületével. Ha a Vásárló a Szolgáltató Internetes Vásárlási Szolgáltatásait igénybe veszi, az a jelen szerződés elfogadásának minősül.</div>
-<div>C, A szolgáltató nem vállal felelősséget az internetes felületen elhelyezett információk tartalmáért és hitelességéért.</div>
-<div>D, A Szolgáltató nem felel a közvetlen, közvetett, előre nem látható vagy következményes károkért, illetőleg elmaradt haszonért, ideértve többek között az adatvesztésből, programok elvesztéséből, üzlet-illetve jóhírnév vesztésből eredő károkat, valamint a Szolgáltató internetes felületének és az Internetes Vásárlási Szolgáltatásának használatából vagy e használat meghiúsulásából fakadó mindenfajta kárt és veszteséget; a Szolgáltató semmilyen körülmények között sem felel a közvetlen ellenőrzési körén kívül eső okból bekövetkező károkért.</div>
-<div>E, A Szolgáltató által fenntartott adathálózati kezelői felület az adathálózat (Internet) sajátosságai miatt mind belföldről, mind külföldről elérhető. A Vásárlási Feltételek azonban kizárólag Magyarország területére címzett és magyar számlázási címet feltüntetett megrendelésre érvényes.</div>
-<div>F, A Szerződés a Szolgáltató internetes felületén a Vásárlási feltételek elfogadásával jön létre. A Szolgáltató internetes felületén való vásárlásnak feltétele a regisztráció. A megrendelések akkor jönnek létre, amikor a Vásárló a megrendelést végső formájában jóváhagyja.</div>
-<div>G, A Szolgáltató fenntartja magának a jogot, hogy a megrendelések beérkezésekor, amennyiben a regisztráció adatainak valódisága kérdéses vagy értelmezhetetlen, az adatokat törölje, és az ezekkel az adatokkal feladott megrendeléseket érvénytelennek minősítse. A megrendelések maximum 100.000 Ft-ig fizethetőek a Fizetési feltételek alapján, az ezt meghaladó értékű rendelések egyedi elbírálás alá kerülnek.</div>
-<div>H, A Szolgáltató internetes felületén történő regisztráció során a Vásárló adatai megadása után a szolgáltató rögzíti azokat, így a Vásárlónak újabb megrendeléséhez már csak felhasználónevét és jelszavát kell megadnia.</div>
-<div> </div>
-<div><strong>4.) Szállítási feltételek:</strong></div>
-<div> </div>
-<div>A, A Szolgáltató internetes felületén megrendelt összes termékre az alábbi szállítási információk vonatkoznak:</div>
-<div>A Vásárló részére megrendelt összes árut postai utánvéttel szállítjuk, ha megfelel a Vásárlási feltételeknek. A postai kézbesítés díja a Vásárlót terheli. Csomagolási díjat nem számolunk fel.</div>
-<div>Házhoz szállítás az egész ország területére érvényes, szállítási címként szerepelhet lakás, vagy akár munkahely címe is, az a Magyarország területén bármilyen szállítási cím megadható. A szállítási cím eltérhet a számlázási címtől is. Szállítási címként azt a címet érdemes megjelölni, ahol a vevő nagy valószínűséggel tartózkodik a szállítás várható időpontjában. A megrendeléskor megadott szállítási címet utólag nem lehet módosítani! Külföldi szállítási vagy számlázási cím esetén a Vásárlási feltételek 3,E. pontjában leírtak érvényesek.</div>
-<div> </div>
-<div><strong>5.) Fizetési feltételek</strong></div>
-<div> </div>
-<div>A, Utánvétes fizetés: a rendelés értékét és a postai kézbesítési díjat az átvételkor kell kiegyenlíteni, amely tartalmazza a szállítás és az utánvét költségeit is. Vásárló a mindenkori postai díjszabásról a Magyar Posta honlapján, valamint hivatalos tákékoztató kiadványaiból tájékozódhat. Szolgáltató nem vállal felelősséget a Posta díjszabásaiban bekövetkezett változások miatti plusszköltségek miatt.</div>
-<div>6, A Vásárló jogai és kötelezettségei<br />A Vásárlónak 8 napig jogában áll a megrendelt terméket a Szolgáltató részére hiánytalanul visszaküldeni. A Távollévők között kötött szerződésekről szóló 17/1999. (II.5.) Kormányrendelet értelmében a visszaküldés költségei a Vásárlót terhelik. A Szolgáltató köteles az áru ellenértékét a csomag kézhezvételétől számítva 30 napon belül visszajuttatni a vásárlónak. Az elállásra nyitva álló 8 munkanapos határidő attól a naptól kezdődik, amikor a Vásárló a csomagot átvette.</div>","fizetesimodok","0","","0","0","2","hu","2013-03-09 23:14:40","2013-03-09 23:14:40","0000-00-00","0000-00-00","0","Szállítási és fizetési módok","39","1","","");
-INSERT INTO diakotthon_szoveg VALUES("44","Adatvédelmi nyilatkozat","","<div><strong>A,</strong> A Szolgáltatás igénybevételéhez szükséges regisztráció során a Pflum Loretta Kft. (továbbiakban: Szolgáltató) csak a feltétlenül szükséges adatokat kéri be és rögzíti a rendszerben. Vásárló az adatok megadásával egyidejűleg hozzájárul, hogy részére a Szolgáltató személyre szabott szolgáltatási ajánlatokat, reklámanyagokat küldhessen, összegyűlt statisztikai adatokat megőrizzen, tiszteletben tartva és óvva a személyiségi jogokat. Amennyiben ezen ajánlatokat Vásárló nem igényli, úgy azt egy, a Szolgáltató számára küldött üzenetben (a regisztráció során megadott e-mail címről) kérheti. Eze esetben a Szolgáltató köteles a Vásárló kérését tiszteletben tartani, és számára nem küld több ilyen jellegű ajánlatot semmilyen formában. A Vásárló bármelyik megadott adatához a Vásárlón kívül kizárólag Szolgáltató rendelkezik hozzáféréssel. A Szolgáltató ezeket az adatokat szigorúan bizalmasan kezeli, azokat a Vásárló hozzájárulása nélkül nem hozza harmadik fél tudomására. A Szolgáltató biztosítja, hogy az általa összegyűjtött információk a Vásárló által megadottaknak megfelelőek és pontosak legyenek, a honlap működtetéséhez szükséges mértéket ne lépjék túl, az adatokat pontosan kezeljék és a rendelkezésre bocsátott információk alapján frissítsék, illetőleg, ha azok a továbbiakban már nem szükségesek, töröljék. A Vásárló kötelezi magát arra, hogy kizárólag valós, és pontos adatokat ad meg a Szolgáltatónak.</div>
-<div> </div>
-<div><strong>B,</strong> A Vásárló a saját maga által megválasztott és bármikor változtatható jelszóval fér hozzá saját adataihoz. Megadott személyes adatait Vásárló a Szolgáltató internetes felhasználói felületén bármikor megváltoztathatja, illetve az \"<a href=\"../index.php?option=com_contact&amp;task=view&amp;contact_id=1&amp;Itemid=33\">Kapcsolat</a>\" - menüpontban megadott elérhetőségek valamelyikén keresztül bármikor töröltetheti.</div>
-<div> </div>
-<div><strong>C,</strong> A jelszó titkosságának védelme a Vásárló feladata. A Vásárló feladata az is, hogy adatait a megfelelő titkossággal kezelje. A Szolgáltató a jelszó jogosulatlan használatáért nem felel.</div>
-<div> </div>
-<div><strong>D, </strong>A Szolgáltató internetes felületéről más weboldalakra linket biztosíthat. A linkek használata során a Vásárlónak tisztában kell lennie azzal, hogy a weboldalakra vonatkozó titoktartási és adatvédelmi szabályzatok eltérőek lehetnek, és a Szolgáltató nem vállal felelősséget mások titoktartási szabályaiért, vagy mások által gyűjtött személyes adatok kezelésére vonatkozó szabályokért.</div>
-<div> </div>
-<div><br /><strong>Pflum Loretta Kft.</strong></div>","adatvedelem","0","szolgaltatasok","0","0","2","hu","2013-03-09 23:14:48","2013-03-09 23:14:48","0000-00-00","0000-00-00","0","Adatvédelmi nyilatkozat","40","1","","");
-INSERT INTO diakotthon_szoveg VALUES("48","Vásárlási szerzőfés (ÁSZF)","","<div></div>
-<div><strong>Megrendelésed leadásakor a Pflum Loretta Bt. vásárlója leszel. Kérjük, szíveskedj áttanulmányozni az alábbi tudnivalókat!</strong></div>
-<div> </div>
-<div>Az Eladó: Pflum Loretta Kft.<br />Címe: 1185 Budapest Honvéd u.101.<br />Adóigazgatási száma: 14310175-2-43<br />Cégjegyzékszáma: 01-09-898190<br />Telefon: +3612905726 ; 06309343402<br />Fax: +3612905726</div>
-<div> </div>
-<div><strong>A szerződés tárgya:</strong></div>
-<div>A Pflum Loretta Kft. által üzemeltetett internetes áruházában megtalálható összes árucikk. Az árucikkek tulajdonságait, jellemzőit az árucikkhez tartozó konkrét oldalon tudhatja meg.</div>
-<div> </div>
-<div><strong>Vételár, fizetési feltételek:</strong></div>
-<div>Az árucikkek mellett feltüntetett ár az árucikk vételára, mely tartalmazza az általános forgalmi adót is. A vételár kiegyenlítése utánvéttel történik.</div>
-<div> </div>
-<div><strong>Fizetés utánvéttel:</strong></div>
-<div>Az utánvéttel történő fizetéskor a vételárat az átvétel helyén kell megfizetni.</div>
-<div> </div>
-<div><strong>Szállítási feltételek, határidők:</strong></div>
-<div>A Pflum Loretta Kft. a Vásárló által megrendelt árucikkeket a megrendeléstől számított 5 munkanapon belül szállítja a vásárlónak.</div>
-<div> </div>
-<div><strong>Az árucikkek cseréje:</strong><br />Ha a megrendelt árucikk gyári hibás, esetleg a szállítás során megsérül, a Pflum Loretta Kft. a telephelyre visszaküldve azt kicseréli a vevőnek. A csere lehetősége csak és kizárólag a láthatóan és bizonyíthatóan gyári hibás termékekre vonatkozik! A nem rendeltetésszerű használatból eredő károkért a Pflum Loretta Kft. nem felel, a címkén bevarrt vásárlói tájékoztatónak nem megfelelő kezelésből fakadó minőségromlásért felelősséget nem áll módunkban vállalni, és az ilyen használt terméket nem cseréljük ki.</div>
-<div> </div>
-<div><strong>Az elállás joga:</strong><br />A megrendelt árucikk kézhez vételétől számított 8 napon belül vásárlóinknak joguk van elállni a vásárlási szándékuktól. Ebben az esetben a Pflum Loretta Kft. köteles a sérülésmentes eredeti csomagolásban lévő árucikkért kifizetett vételárat visszatéríteni a vásárlónak legkésőbb az elállást, illetve az árucikk visszaszolgáltatását követő 30 napon belül. A visszatérítés a szállítási költségre nem vonatkozik, valamint az árucikk visszajuttatásának költségeit a megrendelő viseli.</div>
-<div> </div>
-<div><strong>Adatvédelem:</strong><br />A Pflum Loretta Kft. a birtokába jutott adatokat bizalmasan kezeli, a rendelések teljesítéséhez használja fel, harmadik félnek semmilyen formában nem adja azt tovább. Adatvédelmi szabályainkról bővebben <a href=\"?x=adatvedelem\">itt</a> olvashat.</div>","aszf","0","szolgaltatasok","0","0","2","hu","2013-03-09 23:16:47","2013-03-09 23:16:47","0000-00-00","0000-00-00","0","Vásárlási szerzőfés (ÁSZF)","44","1","","");
-INSERT INTO diakotthon_szoveg VALUES("49","Kapcsolat","","<p class=\"normal\">Pflum Loretta Kft.<br />1185 Budapest, Honvéd u. 101.<br />Telefon: +36 1 290 5726, +36 30 934 3402<br />Fax: +36 1 290 5726</p>","kapcsolat","1","szolgaltatasok","0","0","2","hu","2013-03-09 23:27:06","2013-03-09 23:27:06","2013-03-16","0000-00-00","0","Kapcsolat","45","0","","kapcsolat.php");
-INSERT INTO diakotthon_szoveg VALUES("62","","","","list","0","","","","","hu","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00","0000-00-00","0","","0","","","list.php");
-INSERT INTO diakotthon_szoveg VALUES("63","Garancia","","<div><strong>Az árucikkek cseréje:</strong><br />Ha a megrendelt árucikk gyári hibás, esetleg a szállítás során megsérül, a Pflum Loretta Kft. a telephelyre visszaküldve azt kicseréli a vevőnek. A csere lehetősége csak és kizárólag a láthatóan és bizonyíthatóan gyári hibás termékekre vonatkozik! A nem rendeltetésszerű használatból eredő károkért a Pflum Loretta Kft. nem felel, a címkén bevarrt vásárlói tájékoztatónak nem megfelelő kezelésből fakadó minőségromlásért felelősséget nem áll módunkban vállalni, és az ilyen használt terméket nem cseréljük ki.</div>
-<div> </div>
-<div><strong>Az elállás joga:</strong><br />A megrendelt árucikk kézhez vételétől számított 8 napon belül vásárlóinknak joguk van elállni a vásárlási szándékuktól. Ebben az esetben a Pflum Loretta Kft. köteles a sérülésmentes eredeti csomagolásban lévő árucikkért kifizetett vételárat visszatéríteni a vásárlónak legkésőbb az elállást, illetve az árucikk visszaszolgáltatását követő 30 napon belül. A visszatérítés a szállítási költségre nem vonatkozik, valamint az árucikk visszajuttatásának költségeit a megrendelő viseli.</div>","garancia","1","","0","0","2","hu","2013-09-24 17:17:05","2013-09-24 17:17:05","0000-00-00","0000-00-00","","Garancia","46","0","","");
-INSERT INTO diakotthon_szoveg VALUES("64","Oldaltérkép","","<p class=\"normal\"><span>Hamarosan...</span></p>","oldalterkep","1","","0","0","2","hu","2013-09-24 17:17:12","2013-09-24 17:17:12","0000-00-00","0000-00-00","","Oldaltérkép","47","0","","");
-INSERT INTO diakotthon_szoveg VALUES("65","Hírlevél","","<p class=\"normal\">Adja meg email címét és mi értesítjük legfrissebb ajánlatainkról, akcióinkról!</p>","hirlevel","1","","0","0","2","hu","2013-09-24 17:17:19","2013-09-24 17:17:19","0000-00-00","0000-00-00","","Hírlevél","48","0","","hirlevel.php");
-INSERT INTO diakotthon_szoveg VALUES("66","Akciók","","<p class=\"normal\"><span>Hamarosan...</span></p>","akciok","0","","0","0","2","hu","2013-09-24 17:17:24","2013-09-24 17:17:24","0000-00-00","0000-00-00","","Akciók","49","0","","");
-INSERT INTO diakotthon_szoveg VALUES("67","Fiókom","","","fiokom","0","","0","0","2","hu","2013-09-24 17:17:36","2013-09-24 17:17:36","0000-00-00","0000-00-00","","Fiókom","50","0","","profil.php");
-INSERT INTO diakotthon_szoveg VALUES("68","Rendeléstörténet","","<p class=\"normal\"><span>Hamarosan...</span></p>","rendelestortenet","0","","0","0","2","hu","2013-09-24 17:17:44","2013-09-24 17:17:44","0000-00-00","0000-00-00","","Rendeléstörténet","51","0","","rendelesek.php");
-INSERT INTO diakotthon_szoveg VALUES("69","Kedvencek","","<p class=\"normal\"><span>Hamarosan...</span></p>","kedvencek","0","","0","0","2","hu","2013-09-24 17:17:51","2013-09-24 17:17:51","0000-00-00","0000-00-00","","Kedvencek","52","0","","");
-INSERT INTO diakotthon_szoveg VALUES("72","Kosár","","","kosar","0","","0","0","2","hu","2013-09-24 17:33:35","2013-09-24 17:33:35","0000-00-00","0000-00-00","","Kosár","55","0","","kosar.php");
-INSERT INTO diakotthon_szoveg VALUES("73","Regisztráció","","","regisztracio","0","","","","","hu","","","","","","","","","","regisztracio.php");
-INSERT INTO diakotthon_szoveg VALUES("74","Bejelentkezés","","","bejelentkezes","0","","","","","hu","","","","","","","","","","bejelentkezes.php");
-INSERT INTO diakotthon_szoveg VALUES("90","Új jelszó igénylése","","","elfelejtett","0","","","","","hu","","","","","","","","","","elfelejtett.php");
+INSERT INTO diakotthon_szoveg VALUES("41","Rólunk","","<h2>R&oacute;lunk</h2>
+<p>Szolg&aacute;ltat&aacute;sainkxxx</p>
+<p>&Aacute;ltal&aacute;nos iskolai k&eacute;pz&eacute;s</p>
+<p>&Eacute;rintettek k&ouml;re: enyhe &eacute;rtelmi fogyat&eacute;kos, k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos, gyeng&eacute;nl&aacute;t&oacute;, enyhe mozg&aacute;skorl&aacute;tozott, k&ouml;zepesen mozg&aacute;skorl&aacute;tozott, Down-szindr&oacute;ma, autista, Williams-szindr&oacute;ma, pszichi&aacute;triai beteg.</p>
+<p>Foglalkoz&aacute;sok: &eacute;nek,zene,t&aacute;nc,kos&aacute;rlabda lovagl&aacute;s, r&ouml;plabda, &uacute;sz&aacute;s, h&aacute;ztart&aacute;si ismeretek, sz&aacute;m&iacute;t&aacute;stechnikai ismeretek eszk&ouml;z, seg&eacute;deszk&ouml;z, k&ouml;nyv k&ouml;lcs&ouml;nz&eacute;se.</p>
+<p>Ter&aacute;pi&aacute;k: dr&aacute;mapedag&oacute;gia, dr&aacute;maj&aacute;t&eacute;k, gy&oacute;gytorna, HRG (hydroterapi&aacute;s rehabilit&aacute;ci&oacute;s gimnasztika) gy&oacute;gylovagl&aacute;s, hippoter&aacute;pia, zeneter&aacute;pia, diszlexia-, diszgr&aacute;fia-, diszcalculiater&aacute;pi&aacute;k, besz&eacute;dfejleszt&eacute;s, logop&eacute;dia, eml&eacute;kezet- &eacute;s figyelem fejleszt&eacute;s gy&oacute;gy&uacute;sz&aacute;s.</p>
+<p>Informatik&aacute;val t&aacute;mogatott k&eacute;pess&eacute;gfejleszt&eacute;s.</p>
+<p>Speci&aacute;lis szakiskolai k&eacute;pz&eacute;s</p>
+<p>&Eacute;rintettek k&ouml;re: enyhe &eacute;rtelmi fogyat&eacute;kos,k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos enyhe mozg&aacute;skorl&aacute;tozott, k&ouml;zepesen mozg&aacute;skorl&aacute;tozott.</p>
+<p>Foglalkoz&aacute;sok: bőrd&iacute;szműves, kert&eacute;szet, sz&aacute;m&iacute;t&aacute;stechnikai ismeretek, munk&aacute;ra felk&eacute;sz&iacute;t&eacute;s.</p>
+<p>&nbsp;</p>
+<p>Ter&aacute;pi&aacute;k: gy&oacute;gylovagl&aacute;s, hippoter&aacute;pia gy&oacute;gy&uacute;sz&aacute;s, koll&eacute;gium, di&aacute;kotthon.</p>
+<p>koll&eacute;giumi, di&aacute;kotthoni ell&aacute;t&aacute;s &Eacute;rintettek k&ouml;re  enyhe &eacute;rtelmi fogyat&eacute;kos k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos gyeng&eacute;nl&aacute;t&oacute; enyhe mozg&aacute;skorl&aacute;tozott k&ouml;zepesen mozg&aacute;skorl&aacute;tozott Down-szindr&oacute;ma autista Williams-szindr&oacute;ma Foglalkoz&aacute;sok  sz&aacute;m&iacute;t&aacute;stechnikai ismeretek szuperv&iacute;zi&oacute; Ter&aacute;pi&aacute;k  j&aacute;t&eacute;kter&aacute;pia j&oacute;ga lak&aacute;sotthonok - I-IV. Ell&aacute;tottak sz&aacute;ma: 40 fő. Ell&aacute;tottak &eacute;letkora: 18 - 24 &eacute;ves korig</p>
+<p>Szoci&aacute;lis szolg&aacute;ltat&aacute;s(ok)  lak&aacute;sotthoni ell&aacute;t&aacute;s &Eacute;rintettek k&ouml;re  enyhe &eacute;rtelmi fogyat&eacute;kos k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos Foglalkoz&aacute;sok  eg&eacute;szs&eacute;ges &eacute;letm&oacute;dra nevel&eacute;s ment&aacute;lhigi&eacute;n&eacute;s foglalkoz&aacute;s szexu&aacute;lis felvil&aacute;gos&iacute;t&aacute;s t&aacute;nc ker&aacute;mia, &uuml;vegfest&eacute;s fut&aacute;s kos&aacute;rlabda r&ouml;plabda labdar&uacute;g&aacute;s h&aacute;ztart&aacute;si ismeretek szuperv&iacute;zi&oacute; eszk&ouml;z, seg&eacute;deszk&ouml;z, k&ouml;nyv k&ouml;lcs&ouml;nz&eacute;se Ter&aacute;pi&aacute;k  j&aacute;t&eacute;kter&aacute;pia Sindelar-f&eacute;le komplex fejlesztő elj&aacute;r&aacute;s pszichoter&aacute;pia diszlexia-, diszgr&aacute;fia-, diszcalculiater&aacute;pi&aacute;k eml&eacute;kezet- &eacute;s figyelem fejleszt&eacute;s informatik&aacute;val t&aacute;mogatott k&eacute;pess&eacute;gfejleszt&eacute;s Telephelyek  V. Lak&aacute;sotthon</p>","rolunk","0","rolunk","0","1","2","hu","2013-03-09 23:14:24","2013-03-09 23:14:24","0000-00-00","0000-00-00","0","Rólunk","1","0","","");
+INSERT INTO diakotthon_szoveg VALUES("91","Hírek","<p>h&iacute;rek bevezető</p>","","hirek","0","","","0","","hu","","","","","","","0","0","","hirek.php");
+INSERT INTO diakotthon_szoveg VALUES("92","Galéria","Ez itt galéria","","galeria","0","","","","","hu","","","","","","","","","","galeria.php");
+INSERT INTO diakotthon_szoveg VALUES("93","Kapcsolat","","<h2></h2>
+<h3>El&eacute;rhetős&eacute;gek:</h3>
+<p><br style=\"clear: both;\" /></p>
+<h3>Levelez&eacute;si c&iacute;m:</h3>
+<h4>2890 TATA, &Uacute;j &uacute;t 21.</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>e-mail:</h3>
+<h4>tataidiakotthon@gmail.com</h4>
+<p><br style=\"clear: both;\" /> <br style=\"clear: both;\" /></p>
+<h6>Int&eacute;zm&eacute;ny&uuml;nket a (+36-34)587-470-es telefonsz&aacute;mon kereszt&uuml;l lehet el&eacute;rni.</h6>
+<p><br style=\"clear: both;\" /></p>
+<h3>A porta az al&aacute;bbi mell&eacute;kleteket tudja kapcsolni:</h3>
+<p><br style=\"clear: both;\" /></p>
+<h3>Int&eacute;zm&eacute;nyvezető: Becs&aacute;kn&eacute; Szőke &Eacute;va</h3>
+<h4>13-as mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>Int&eacute;zm&eacute;nyvezető-helyettes: Sz&aacute;mn&eacute; Maurer Hajnalka</h3>
+<h4>27-es mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>Gyermekotthon vezető: Soos Bal&aacute;zsn&eacute;</h3>
+<h4>14-es mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>Koll&eacute;giumvezető: Kis&eacute;kn&eacute; Bens&oacute; No&eacute;mi</h3>
+<h4>15-&ouml;s mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>Munka&uuml;gyi előad&oacute;: dr. Bokros Albertn&eacute;</h3>
+<h4>19-es mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>Titk&aacute;rs&aacute;g: Kalm&aacute;rn&eacute; Boros Zsuzsanna, Major Adrienn</h3>
+<h4>12-es mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /></p>
+<h3>Gazdas&aacute;gi iroda: Deli Gyul&aacute;n&eacute;, Kemecsi Vikt&oacute;ria,</h3>
+<p><br style=\"clear: both;\" /></p>
+<h3>Peczn&eacute; Holczinger Andrea</h3>
+<h4>22-es mell&eacute;k</h4>
+<p><br style=\"clear: both;\" /> <br style=\"clear: both;\" /></p>
+<h3>Fax:  +36 34 587-477</h3>","kapcsolat","0","","","0","","hu","","","","","","","0","0","","");
+INSERT INTO diakotthon_szoveg VALUES("94","Címlap","","<h2>Üdvözöljük!</h2>
+
+<p> 
+<div id=\"cimszoveg\"> 
+<img src=\"graphics/intezmeny.jpg\" alt=\"intezmény\" />
+    A Komárom-Esztergom Megyei Óvoda, Általános Iskola, Speciális Szakiskola, Kollégium és Gyermekotthon többcélú, közös igazgatású közoktatási intézmény.
+Feladata a szakmai alapdokumentumban meghatározott nevelési-oktatási, gyermekvédelmi tevékenységek és szolgáltatások megvalósítása az intézményi dokumentumokban meghatározottaknak megfelelően:
+sajátos nevelési igényű-tanulásban és értelmileg akadályozott, autista gyermekek </br> 
+- óvodai nevelése,</br>
+- általános iskolai nevelése-oktatása,</br>
+- szakiskolai képzése, /speciális szakiskolai, készségfejlesztő speciális szakiskolai/</br>
+- kollégiumi ellátása,</br>
+- gyermekvédelmi szakellátása.</br></div>
+...</p>","cimlap","0","","","","","hu","","","","","","","","","","");
+INSERT INTO diakotthon_szoveg VALUES("95","Utazás","<p>Elutaztunk Br&uuml;sszelbe...</p>","<p>Itt pedig hosszan &iacute;runk r&oacute;la</p>","","0","","","1","","hu","2014-05-01 00:00:00","","","","","","2","0","","");
 
 
 

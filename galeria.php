@@ -32,7 +32,7 @@ else {
 					$kepsor = $kepsor . '
 						<div class="box">
 						<p>'.$next_felirat.'</p>
-						<a href="?p=galeria&amp;csoport='.$next_sorszam.'&amp;lang='.$_SESSION["lang"].'&amp;lap=1">
+						<a href="?page=galeria&amp;csoport='.$next_sorszam.'&amp;lang='.$_SESSION["lang"].'&amp;lap=1">
 							<img src="' . $eleres . ''.$next_fajlnev_nagy . '" />
 						</a>
 						</div>
@@ -72,13 +72,13 @@ else {
 		#ha az oldal utols? k?p?t n?zz?k ?s m?g van ut?na oldal
 		If (($kepszamlalo == $kepdbv) AND ($ig < $kepdb)){
 			#$utolsokep = "utols�k�p";
-			$tovabblink = '<a href="index.php?p=galeria&amp;csoport='.$_REQUEST[csoport].'&amp;lang='.$_SESSION["lang"].'&amp;lap='.($lapxx+1).'" class="controlright">';}
+			$tovabblink = '<a href="index.php?page=galeria&amp;csoport='.$_REQUEST[csoport].'&amp;lang='.$_SESSION["lang"].'&amp;lap='.($lapxx+1).'" class="controlright">';}
 		else {
 			$tovabblink = '<a href="#" onclick="return hs.previous(this)" class="controlright">';}
 		#ha az oldal els� k�p�t n?zz?k ?s m?g van el?tte oldal
 		If (($kepszamlalo == 1) AND ($tol > 0)){
 			#$elsokep = "els�k�p";
-			$elozolink = '<a href="index.php?p=galeria&amp;csoport='.$_REQUEST[csoport].'&amp;lang='.$_SESSION["lang"].'&amp;lap='.($lapxx-1).'" class="controlleft">';}
+			$elozolink = '<a href="index.php?page=galeria&amp;csoport='.$_REQUEST[csoport].'&amp;lang='.$_SESSION["lang"].'&amp;lap='.($lapxx-1).'" class="controlleft">';}
 		else {
 			#$elsokep = "nem els�k�p";
 			$elozolink = '<a href="#" onclick="return hs.next(this)" class="controlleft">';}
@@ -117,7 +117,7 @@ else {
 		</tr>
 	</table>';
 	*/
-	$visszagomb = '<div class="box" style="float: right;"><p><a href="galeria.php?p=galeria&amp;csoport='.$visszacsoport.'&amp;lang='.$_SESSION["lang"].'" class="visszagomb">Vissza</a></p></div>';
+	$visszagomb = '<div class="box" style="float: right;"><p><a href="?page=galeria&amp;csoport='.$visszacsoport.'&amp;lang='.$_SESSION["lang"].'" class="visszagomb">Vissza</a></p></div>';
 	}
 	
 	$galeriatartalom = $galeriafejlec . $kepsor .$visszagomb;

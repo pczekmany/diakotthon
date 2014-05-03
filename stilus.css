@@ -188,7 +188,50 @@ a {
 #tartalomsav li{
 	margin-top: 10px;}
 
-#hirekbox{
+
+.oldalszam {
+    margin: 0px 2px 0px 2px;
+    text-decoration: none;
+    color: #cb1f51;
+    padding: 2px;
+    font-size: 12px;}
+
+.oldalszam:hover {
+	color: #686868;
+	font-weight: bold;}	
+	
+.oldalszamv {
+	text-decoration: none;
+	color: #fefefe;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 2px;
+   background-color: #cecece !important;}
+
+.lapszamsor {
+    clear: both;
+    float: right;
+    height: 30px;
+}
+
+.lapszamsor a{
+   text-decoration: none !important;
+   color: #fefefe;
+   margin: 1px 1px 1px 1px;
+   text-align: center;
+   padding: 1px 3px 1px 3px;
+   border: 0px solid #111111;
+   font-size: 10px;
+   height: 18px;
+   display: block;
+   float: left;
+}
+
+.lapszamsor a:hover{
+   background-color: #28668f}
+
+
+.hirekbox{
         display: block;
         border: 1px solid #868686;
         border-radius: 10px;

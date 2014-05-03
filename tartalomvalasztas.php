@@ -4,20 +4,23 @@ $menu = filter_input(INPUT_GET, 'menu');
 $page = filter_input(INPUT_GET, 'page');
 
 if ($menu){
-   $tartalom = $index_html->load_template_file("sablonok/".$menu.".html", $array);}
-else {	
-   $tartalom = $index_html->load_template_file("sablonok/cimlap.html", $array);
+   $tartalom = $index_html->load_template_file("sablonok/".$menu.".html", $array);
 }	
 
+$cikk = new cikkszoveg();
+
 if ($page){
-   $cikk = new cikkszoveg();
    $cikk->mysql_read($page, 'hu');
-   $tartalom = $cikk->tartalom;
+} else {
+    if (!$menu){
+        $cikk->mysql_read('cimlap', 'hu');   
+    }
 }
 
-if ($menu == 'hirek'){
-    require_once('hirek.php');
+if (!$menu){ 
+    $tartalom = '<h1>'.$cikk->cim .'</h1>'. $cikk->tartalom;
 }
-if ($menu == 'galeria'){
-    require_once('galeria.php');
+
+if ($cikk->php_file){
+  require_once($cikk->php_file);
 }

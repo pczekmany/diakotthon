@@ -213,3 +213,94 @@ class email{
    }
    
 }
+
+
+
+
+
+class cikkszoveg {
+	public $html_code;
+	public $cikksorszam;
+	public $cim;
+    
+    public $hibalista;
+    public $hivatkozas;
+    public $menucsoport;
+    public $cikk_errors = array();
+	
+	public $tartalom;
+	public $nyelv;
+	public $menu;
+	public $archiv;
+	public $hir;
+	public $bevezeto;
+	public $kiemelt;
+	public $menunev;
+	public $menufent;
+	public $sorszam;
+	
+	public $kelt;
+	public $megjelenes;
+	public $esemeny;
+	public $esemeny_ig;
+	public $php_file;
+	public $sorrend;
+	
+	function mysql_read($cikksorszam, $nyelv){
+		
+		if (($nyelv == '') OR ($nyelv == 'hu')){
+			$nyelvszures = "AND nyelv = 'hu'";}
+		else {
+			$nyelvszures = "AND nyelv = '".$nyelv."'";
+		}
+        if (is_numeric($cikksorszam)){
+            $r = mysql_query("SELECT tartalom, cim, archiv, php_file, bevezeto, hivatkozas, menucsoport, nyelv, menu_fent, hir,
+			   kiemelt, menunev, sorszam, kelt, megjelenes, esemeny, esemeny_ig, php_file, sorrend
+			   FROM ".$_SESSION[adatbazis_etag]."_szoveg
+			   WHERE sorszam =" . $cikksorszam . " ".$nyelvszures."");
+        } else {
+		   $r = mysql_query("SELECT tartalom, cim, archiv, php_file, bevezeto, hivatkozas, menucsoport, nyelv, menu_fent, hir,
+			  kiemelt, menunev, sorszam, kelt, megjelenes, esemeny, esemeny_ig, php_file, sorrend
+			  FROM ".$_SESSION[adatbazis_etag]."_szoveg
+			  WHERE hivatkozas ='" . $cikksorszam . "' ".$nyelvszures."");
+        }
+		
+		$a = mysql_fetch_row($r);
+		$cikkszoveg = $a[0];
+		$cikkarchiv = $a[2];
+		$cikkphp = $a[3];
+        $cikkbevezeto = $a[4];
+        $cikkhivatkozas = $a[5];
+        $cikkmenucsoport = $a[6];
+		
+		$this->tartalom = $a[0];
+		$this->archiv = $a[2];
+		$this->cim = $a[1];
+		$this->bevezeto = $a[4];
+		$this->nyelv = $a[7];
+		$this->menufent = $a[8];
+		$this->hir = $a[9];
+		$this->kiemelt = $a[10];
+		$this->menunev = $a[11];
+		$this->sorszam = $a[12];
+		$this->kelt = $a[13];
+		$this->megjelenes = $a[14];
+		$this->esemeny = $a[15];
+		$this->esemeny_ig = $a[16];
+		$this->php_file = $a[17];
+		$this->sorrend = $a[18];
+		$this->cikksorszam = $cikksorszam;
+        $this->bevezeto = $cikkbevezeto;
+        $this->hivatkozas = $cikkhivatkozas;
+        $this->menucsoport = $cikkmenucsoport;
+		if ($cikkarchiv == 1){
+			$this->html_code= '
+			<h2 class="lapcim">Hiba történt!</h2>
+			<div class="szovegblokk">
+				A keresett oldal nem található!
+			</div>';
+		}
+		
+		
+		}
+}

@@ -167,20 +167,11 @@ INSERT INTO diakotthon_szoveg VALUES("93","Kapcsolat","","<h2></h2>
 <h4>22-es mell&eacute;k</h4>
 <p><br style=\"clear: both;\" /> <br style=\"clear: both;\" /></p>
 <h3>Fax:  +36 34 587-477</h3>","kapcsolat","0","","","0","","hu","","","","","","","0","0","","");
-INSERT INTO diakotthon_szoveg VALUES("94","Címlap","","<h2>Üdvözöljük!</h2>
-
-<p> 
-<div id=\"cimszoveg\"> 
-<img src=\"graphics/intezmeny.jpg\" alt=\"intezmény\" />
-    A Komárom-Esztergom Megyei Óvoda, Általános Iskola, Speciális Szakiskola, Kollégium és Gyermekotthon többcélú, közös igazgatású közoktatási intézmény.
-Feladata a szakmai alapdokumentumban meghatározott nevelési-oktatási, gyermekvédelmi tevékenységek és szolgáltatások megvalósítása az intézményi dokumentumokban meghatározottaknak megfelelően:
-sajátos nevelési igényű-tanulásban és értelmileg akadályozott, autista gyermekek </br> 
-- óvodai nevelése,</br>
-- általános iskolai nevelése-oktatása,</br>
-- szakiskolai képzése, /speciális szakiskolai, készségfejlesztő speciális szakiskolai/</br>
-- kollégiumi ellátása,</br>
-- gyermekvédelmi szakellátása.</br></div>
-...</p>","cimlap","0","","","","","hu","","","","","","","","","","");
+INSERT INTO diakotthon_szoveg VALUES("94","Címlap","","<h2>&Uuml;dv&ouml;z&ouml;lj&uuml;k!</h2>
+<p>&nbsp;</p>
+<div id=\"cimszoveg\"><img alt=\"intezm&eacute;ny\" class=\"jobbrazart_kep\" src=\"graphics/intezmeny.jpg\" /> A Kom&aacute;rom-Esztergom Megyei &Oacute;voda, &Aacute;ltal&aacute;nos Iskola, Speci&aacute;lis Szakiskola, Koll&eacute;gium &eacute;s Gyermekotthon t&ouml;bbc&eacute;l&uacute;, k&ouml;z&ouml;s igazgat&aacute;s&uacute; k&ouml;zoktat&aacute;si int&eacute;zm&eacute;ny. Feladata a szakmai alapdokumentumban meghat&aacute;rozott nevel&eacute;si-oktat&aacute;si, gyermekv&eacute;delmi tev&eacute;kenys&eacute;gek &eacute;s szolg&aacute;ltat&aacute;sok megval&oacute;s&iacute;t&aacute;sa az int&eacute;zm&eacute;nyi dokumentumokban meghat&aacute;rozottaknak megfelelően: saj&aacute;tos nevel&eacute;si ig&eacute;nyű-tanul&aacute;sban &eacute;s &eacute;rtelmileg akad&aacute;lyozott, autista gyermekek <br /> - &oacute;vodai nevel&eacute;se,<br /> - &aacute;ltal&aacute;nos iskolai nevel&eacute;se-oktat&aacute;sa,<br /> - szakiskolai k&eacute;pz&eacute;se, /speci&aacute;lis szakiskolai, k&eacute;szs&eacute;gfejlesztő speci&aacute;lis szakiskolai/<br /> - koll&eacute;giumi ell&aacute;t&aacute;sa,<br /> - gyermekv&eacute;delmi szakell&aacute;t&aacute;sa.</div>
+<p>...</p>
+<p>&nbsp;</p>","cimlap","0","","","0","","hu","","","","","","","0","0","","");
 INSERT INTO diakotthon_szoveg VALUES("95","Utazás","<p>Elutaztunk Br&uuml;sszelbe...</p>","<p>Itt pedig hosszan &iacute;runk r&oacute;la</p>","","0","","","1","","hu","2014-05-01 00:00:00","","","","","","2","0","","");
 
 

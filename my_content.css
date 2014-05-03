@@ -27,3 +27,9 @@
 	
 .normal a:active{
 	text-decoration:underline;}
+
+.jobbrazart_kep {
+    width: 300px;
+    float: right;
+    margin: 5px 0px 5px 30px;
+}

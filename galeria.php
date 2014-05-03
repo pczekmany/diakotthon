@@ -1,5 +1,4 @@
 <?php
-include('adatkapcsolat.php');
 $megjelentcsoport = 0;
 $_SESSION["lang"] = 'hu';
 

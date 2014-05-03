@@ -187,6 +187,14 @@ a {
 	width: 600px;}
 #tartalomsav li{
 	margin-top: 10px;}
+
+#hirekbox{
+        display: block;
+        border: 1px solid #868686;
+        border-radius: 10px;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 10px 0;}
 	
 #referenciak{
 	margin: 30px 0px 30px 0px;
@@ -237,7 +245,19 @@ a {
 	display: block;
 	width: 300px;
         float: left;
-        margin: 10px;
+        margin: 20px 30px 20px 0;
+}
+#leokep2{
+	display: block;
+	width: 300px;
+        float: right;
+        margin: 5px 0px 5px 30px;
+}
+#leokep3{
+	display: block;
+	width: 300px;
+        float: left;
+        margin: 5px 30px 5px 0px;
 }
 #leolead{
 	display: block;

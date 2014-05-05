@@ -23,23 +23,23 @@ input {
 	background-position: top center;
 }
 	
-.box{
+.box_csoportok{
 	float:left;
-	background-color: #e9e5d9;
 	margin: 10px 0px 10px 0px !important;
 	text-align: left;
-        border: 5px solid #231200;
+        border: 2px solid #231200;
+        border-radius: 10px;
 	width: 100%;
 	min-height: 90px;
 }
-.box a img{
+.box_csoportok a img{
  	vertical-align: left;
 	max-width: 400px;
-	margin: 15px 0px 15px 0px; 
+	margin: 15px 0px 15px 15px; 
 	border: 5px solid #231200;
 	max-height: 217px;
 }
-.box  p  {
+.box_csoportok  p  {
 	font-family: 'edward', Arial;
         float: right;
 	text-align: right;
@@ -51,7 +51,44 @@ input {
 	font-size: 40px;
 }
 
-.box a{
+.box_csoportok a{
+	text-decoration: none;
+	color: #231200;
+	font-size: 30px;
+}
+
+
+	
+.box_kepek{
+	float:left;
+	margin: 10px 10px 10px 10px !important;
+	text-align: center;
+        border: 2px solid #231200;
+        border-radius: 10px;
+	width: 40%;
+	min-height: 90px;
+}
+.box_kepek a img{
+ 	vertical-align: left;
+	max-width: 400px;
+	margin: 15px 0px 15px 0px; 
+	border: 5px solid #231200;
+	max-height: 217px;
+        background-color: #fff;
+}
+.box_kepek  p  {
+	font-family: 'edward', Arial;
+        float: right;
+	text-align: right;
+	margin: 20px 0px 20px 0px;
+        padding: 10px 20px 10px 20px;
+	border: 0px solid #c5aa5f;
+	height: 30px;
+	color: #231200;
+	font-size: 40px;
+}
+
+.box_kepek a{
 	text-decoration: none;
 	color: #231200;
 	font-size: 30px;

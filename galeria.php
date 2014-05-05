@@ -29,7 +29,7 @@ else {
 		if ($next_fajlnev_nagy != ''){
 					$megjelentcsoport++;
 					$kepsor = $kepsor . '
-						<div class="box">
+						<div class="box_csoportok">
 						<p>'.$next_felirat.'</p>
 						<a href="?page=galeria&amp;csoport='.$next_sorszam.'&amp;lang='.$_SESSION["lang"].'&amp;lap=1">
 							<img src="' . $eleres . ''.$next_fajlnev_nagy . '" />
@@ -83,7 +83,7 @@ else {
 			$elozolink = '<a href="#" onclick="return hs.next(this)" class="controlleft">';}
 		if ($megjelentcsoport == 0){
 		$kepsor = $kepsor . '
-						<div class="box">
+						<div class="box_kepek">
 						<a href="' . $eleres . $next_fajlnev_nagy . '" class="highslide" onclick="return hs.expand (this, {dimmingOpacity: 0.90})">
 							<img src="' . $eleres . ''.$next_fajlnev_nagy . '" alt="" />
 						</a>
@@ -92,10 +92,10 @@ else {
 						<div class="highslide-caption">
 							<div id="kepfelirat">'.$next_felirat.'<br />('.($tol+$kepszamlalo).'/'.$kepdb.')</div>
 							'.$elozolink.'
-								<img src="graphics/next.png" border="0" alt="k�vetkez�" title="k�vetkez�" />
+								<img src="graphics/next.png" border="0" alt="következő" title="következő" />
 							</a>
 							'.$tovabblink.'
-								<img src="graphics/back.png" border="0" alt="el�z�" title="el�z�" />
+								<img src="graphics/back.png" border="0" alt="előző" title="előző" />
 							</a>
 						</div>
 						</div>
@@ -123,5 +123,5 @@ else {
 	/*$fixxszoveg = '<h1>'.$lang_galeria.'</h1>'.$galeriatartalom;
 	$alcim = ' - '.$lang_galeria;*/
 
-        $tartalom = $galeriatartalom;	
+        $tartalom .= $galeriatartalom;	
 ?>

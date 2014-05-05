@@ -128,3 +128,10 @@ function divdisp_off(id){
 	if (id==2){id = 'admin_termekfotok';}
 	document.getElementById(id).style.display = 'none';
 }
+
+function megerosites_x(torolszam, formnev, termek) {
+	if (formnev == "galeriakep") {
+		var answer = confirm ("Ön a KÉP TÖRLÉSÉT választotta.\n Biztosan szeretné?");
+		if (answer) { window.location="admin.php?tartalom=admingaleria&kepment=2&csoport="+termek+"&torol="+torolszam;}
+	}
+}

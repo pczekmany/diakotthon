@@ -28,7 +28,7 @@ If ($_POST['cim'] != "") {
 			else {$ment_hir = 0;}
 		if ($_POST[check_aktiv] == 'on'){$ment_aktiv = 0;}
 			else {$ment_aktiv = 1;}
-		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_szoveg SET tartalom='$_POST[content]', bevezeto='$_POST[bevezeto]', cim='$_POST[cim]', menunev='$_POST[menunev]', sorrend='$_POST[sorrend]', nyelv='$_POST[cikk_nyelv]', archiv='$ment_aktiv', menu_fent='$ment_menu', hir='$ment_hir' WHERE sorszam='$_POST[sorszam]'";
+		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_szoveg SET tartalom='$_POST[content]',php_file='$_POST[php_file]', bevezeto='$_POST[bevezeto]', cim='$_POST[cim]', menunev='$_POST[menunev]', sorrend='$_POST[sorrend]', nyelv='hu', archiv='$ment_aktiv', menu_fent='$ment_menu', hir='$ment_hir', hivatkozas='$_POST[hivatkozas]' WHERE sorszam='$_POST[sorszam]'";
 		mysql_query($sql2);
 	} else {
 		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_kategoriak SET szoveg='$_POST[content]' WHERE sorszam='$_REQUEST[kategoria]'";
@@ -38,7 +38,7 @@ If ($_POST['cim'] != "") {
 
 If ($_REQUEST['kategoria'] == "") {
 	If ($_REQUEST[valaszt] != ''){
-		$r = mysql_query("SELECT tartalom, sorszam, cim, menunev, nyelv, menu_fent, archiv, sorrend, hir, bevezeto FROM ".$_SESSION[adatbazis_etag]."_szoveg WHERE sorszam = $_REQUEST[valaszt]");
+		$r = mysql_query("SELECT tartalom, sorszam, cim, menunev, nyelv, menu_fent, archiv, sorrend, hir, bevezeto, hivatkozas, php_file FROM ".$_SESSION[adatbazis_etag]."_szoveg WHERE sorszam = $_REQUEST[valaszt]");
 		$h = mysql_fetch_row($r);  
 		$szoveg_tartalom = $h[0];
 		$szoveg_nyelv = $h[4];
@@ -46,6 +46,7 @@ If ($_REQUEST['kategoria'] == "") {
 		$szoveg_archiv = $h[6];
 		$szoveg_hir = $h[8];
 		$szoveg_bevezeto = $h[9];
+		$szoveg_hivatkozas = $h[10];
 		if (($szoveg_nyelv == 'hu') OR ($szoveg_nyelv == '')){ $cikknyelvcombo_hu = 'selected="selected"';}
 		if ($szoveg_nyelv == 'en') { $cikknyelvcombo_en = 'selected="selected"';}
 		if ($szoveg_menu == 1) {$cikkmenu_check = 'checked="checked"';}
@@ -86,11 +87,11 @@ while ($next_element = mysql_fetch_array($result)){
 	<a href="?tartalom=szovegszerk&valaszt='.$next_element[sorszam].'" class="cedula_admintermeklista">
 		<span style="width: 26px;">'. $sor.'</span>
 		<span style="width: 320px; text-align: left;">'. $next_element[cim].'</span>
-		<span style="width: 50px; text-align: center;">'. $next_element[sorszam].'</span>
-		<span style="width: 50px; text-align: center;">'. $next_element[nyelv].'</span>
-		<span style="width: 50px; text-align: center;">'.$menukapcs.'</span>
-		<span style="width: 50px; text-align: center;">'.$archivkapcs.'</span>
-		<span style="width: 50px; text-align: center;">'.$next_element[sorrend].'</span>
+		<!--<span style="width: 50px; text-align: center;">'. $next_element[sorszam].'</span>
+		<span style="width: 50px; text-align: center;">'. $next_element[nyelv].'</span>-->
+		<span style="width: 70px; text-align: center;">'.$menukapcs.'</span>
+		<span style="width: 70px; text-align: center;">'.$archivkapcs.'</span>
+		<span style="width: 70px; text-align: center;">'.$next_element[sorrend].'</span>
 	</a>';
 }
 
@@ -100,11 +101,11 @@ $szoveglista = '
 		<div style="width: 630px; height: 20px; color: #444444; font-weight: bold; font-size: 12px; margin: 0px auto 0px auto;">
 			<span style="width: 26px;">&nbsp;</span>
 			<span style="width: 320px; text-align: center;">cím</span>
-			<span style="width: 50px; text-align: center;">id</span>
-			<span style="width: 50px; text-align: center;">nyelv</span>
-			<span style="width: 50px; text-align: center;">menüelem</span>
-			<span style="width: 50px; text-align: center;">aktív</span>
-			<span style="width: 50px; text-align: center;">sorrend</span>
+			<!--<span style="width: 50px; text-align: center;">id</span>
+			<span style="width: 50px; text-align: center;">nyelv</span>-->
+			<span style="width: 70px; text-align: center;">menüelem</span>
+			<span style="width: 70px; text-align: center;">aktív</span>
+			<span style="width: 70px; text-align: center;">sorrend</span>
 		</div>
 		'.$szoveglista.'
 		<div style="float:left; height: 40px; margin: 16px 0px 6px 36px;">
@@ -136,13 +137,8 @@ if (($_REQUEST['valaszt'] == '') OR ($_REQUEST['check_torles'] == "on")){
 			<tr><td><input name="sorszam" type="text" value="' . $h[1] . '" size="2" style="display:none;" /></td></tr>
 			'.$menu_nev.'
 			<tr><td>Sorrend:</td><td><input name="sorrend" type="text" value="' . $h[7] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
-			<tr><td>Nyelv:</td>
-				<td>
-				<select name="cikk_nyelv">
-					<option '.$cikknyelvcombo_hu.'value="hu">hu</option>
-				</select>
-				</td>
-			</tr>
+	  	    <tr><td>Hivatkozas:</td><td><input name="hivatkozas" type="text" value="' . $h[10] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
+			<tr><td>PHP fájl:</td><td><input name="php_file" type="text" value="' . $h[11] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
 			<tr><td>Menü elem:</td><td><input name="check_menu" type="checkbox" '.$cikkmenu_check.'/></td></tr>
 			<tr><td>Hír:</td><td><input name="check_hir" type="checkbox" '.$cikkhir_check.'/></td></tr>
 			<tr><td>Aktív:</td><td><input name="check_aktiv" type="checkbox" '.$cikkarchiv_check.'/></td></tr>

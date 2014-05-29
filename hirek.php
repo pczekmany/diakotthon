@@ -12,7 +12,9 @@ while ($next_element = mysql_fetch_array($result)){
             . '<h2>'.$next_element[cim].'</h2>'
             . '<div>'.$next_element[bevezeto].'</div>'
             . '<a href="?page='.$next_element[sorszam].'">Részletek...</a>'
+           
             . '</div>';
 }
+
 
 $tartalom .= $navsav->lapszamsor . $tartalom_hirek;

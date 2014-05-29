@@ -1,10 +1,12 @@
 <?php
+
 	if ($_SERVER['HTTP_HOST'] == 'localhost'){
 			$kapcsolat = mysql_connect("localhost", "root", "");
 			$adatbazis = mysql_select_db("diakotthon");
 		} else {
-			$kapcsolat = mysql_connect("localhost", "diakott_user", "diak2014");
-			$adatbazis = mysql_select_db("diakott_data");
+			$kapcsolat = mysql_connect("localhost", "omhoke_user", "user2014");
+			$adatbazis = mysql_select_db("omhoke_diakotthon");
+                        
 		}
 
 			if (!$kapcsolat) {

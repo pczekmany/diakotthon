@@ -1,8 +1,19 @@
+@font-face {
+    font-family: 'pt_sans-web-regular-webfont';
+    src: url('fonts/pt_sans-web-regular-webfont.eot');
+    src: url('fonts/pt_sans-web-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pt_sans-web-regular-webfont.woff') format('woff'),
+         url('fonts/pt_sans-web-regular-webfont.ttf') format('truetype'),
+         url('fonts/pt_sans-web-regular-webfont.svg#TrumpGothicEastRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+
 a:active, a:focus{ outline:none; }
 
 
 body{
-	font-family: Arial;
+	font-family: 'pt_sans-web-regular-webfont', Arial;
 	text-align: center;
 	font-size: 16px;
 	text-decoration: none;
@@ -357,3 +368,156 @@ a {
 	background-color: fefefe;
 	bottom: 10px;
 	right: 20px;}
+
+.visszagomb{
+    float: right;
+    color: #333;
+    text-decoration: none !important;
+    margin: 10px 0px 10px 0px;
+}
+
+.visszagomb:hover{
+    color: #aaa !important;
+}
+
+
+//* NAPTÁR ELEJE
+
+/*naptár eleje*/
+.doboz_tobb{
+	color: #686868;
+	margin-top: -14px;
+	float: right;
+	width: 90px;
+	height: 12px;
+	font-size: 10px !important;
+	
+	border: 1px solid #aaaaaa;
+	border-radius: 2px;
+	padding: 1px;
+	text-align: center;
+	display: block;
+	margin: -14px 5px 2px 0px;
+	text-decoration: none;}
+	
+.doboz_tobb:hover {
+	color: #009AC8;}
+	
+.doboz_tobb a{
+	color: #009AC8;}
+	
+.doboz_tobb a:hover{	
+	text-decoration: underline;
+	color: #009AC8;}
+	
+.olddoboz_tobb {
+	color: #009AC8;
+	float: right;
+	width: 40px;
+	margin: 0px 5px 2px 0px;
+	text-decoration: none;}
+	
+.olddoboz_tobb a{
+	text-decoration: none;
+	color: #009AC8;}
+	
+.olddoboz_tobb a:hover{	
+	text-decoration: underline;
+	color: #009AC8;}
+	
+.oldnaptarlink {
+	color: #009AC8;
+	float: right;
+	font-size: 12px;
+	width: 230px;
+	text-align: right;
+	margin: 4px 10px 2px 0px;
+	text-decoration: none;}
+	
+.oldnaptarlink a{
+	text-decoration: none;
+	font-size: 12px;}
+	
+.oldnaptarlink a:hover{	
+	color: #009AC8;}
+	
+.naptarhetkoznap, .naptarhetvegenap, .naptarfejlec, .naptarfejlech, .naptarhetkoznapsznap, .naptarma{
+	width: 26px;
+	height: 26px;
+	/*background-color: #f1f1f1;*/
+	float: left;
+	text-align: left;
+	display: block;
+	color: #686868;
+	font-size: 12px;
+	padding: 1px 1px 1px 1px;
+	margin: 0px 0px 0px 0px;
+}
+
+.naptarhetkoznap:hover, .naptarhetvegenap:hover, .naptarhetkoznapsznap:hover{
+	padding: 0px 0px 0px 0px;
+	width: 26px;
+	height: 26px;
+	border: 1px solid #009AC8;}
+
+.naptarma{
+	/*background-color: #913516;*/}
+
+.naptarhetkoznap, .naptarhetvegenap, .naptarhetkoznapsznap, .naptarma{
+	text-align: left;	
+}
+
+.naptarhetkoznapsznap{
+	background-image: url("graphics/szunnap.gif");
+	background-repeat: no-repeat;
+}
+
+.naptarhetvegenap, .naptarfejlech{
+	/*background-color: #e2e2e2;*/
+}
+
+.naptarfejlec, .naptarfejlech{
+	font-size: 12px;
+	height: 12px;
+	padding-top: 0px;
+        margin-bottom: 8px;
+}
+
+.naptarlap {
+	width: 220px; 
+	height: 180px;
+	float: left; 
+	margin: -20px 0px 35px 34px; 
+	padding: 0px 0px 0px 0px; 
+	text-align: center; 
+	border-top: 0px solid #923516;
+	border-right: 0px solid #923516;
+	border-bottom: 0px solid #923516;
+	border-left: 0px solid #923516;}
+
+.naptarlap img{
+    width: 10px !important;
+}
+
+.napt_link{
+	text-decoration: none;
+	color: #000000;}
+
+	.lapszamsor{
+	margin: 0px 0px 10px 0px;}
+
+.oldalszam {
+	margin: 0px 3px 0px 3px;
+	text-decoration: none;
+	color: #009AC8;}
+
+.oldalszam:hover {
+	color: #686868;
+	font-weight: bold;}	
+	
+.oldalszamv {
+	text-decoration: none;
+	color: #686868;
+	font-weight: bold;}
+	
+//* NAPTÁR VÉGE

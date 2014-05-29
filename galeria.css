@@ -1,13 +1,25 @@
 @font-face {
     font-family: 'edward';
-    src: url('edward.eot');
-    src: url('edward.eot?#iefix') format('embedded-opentype'),
-         url('edward.woff') format('woff'),
-         url('edward.ttf') format('truetype'),
-         url('edward.svg#TrumpGothicEastRegular') format('svg');
+    src: url('fonts/edward.eot');
+    src: url('fonts/edward.eot?#iefix') format('embedded-opentype'),
+         url('fonts/edward.woff') format('woff'),
+         url('fonts/edward.ttf') format('truetype'),
+         url('fonts/edward.svg#TrumpGothicEastRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }  
+
+@font-face {
+    font-family: 'futuramdcnhu';
+    src: url('fonts/futuramdcnhu.eot');
+    src: url('fonts/futuramdcnhu.eot?#iefix') format('embedded-opentype'),
+         url('fonts/futuramdcnhu.woff') format('woff'),
+         url('fonts/futuramdcnhu.ttf') format('truetype'),
+         url('fonts/futuramdcnhu.svg#TrumpGothicEastRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+
 
 a:active, a:focus{ outline:none; }
 
@@ -40,7 +52,7 @@ input {
 	max-height: 217px;
 }
 .box_csoportok  p  {
-	font-family: 'edward', Arial;
+	font-family: 'pt_sans-web-regular-webfont', Arial;
         float: right;
 	text-align: right;
 	margin: 20px 0px 20px 0px;
@@ -48,7 +60,7 @@ input {
 	border: 0px solid #c5aa5f;
 	height: 30px;
 	color: #231200;
-	font-size: 40px;
+	font-size: 32px;
 }
 
 .box_csoportok a{
@@ -77,7 +89,7 @@ input {
         background-color: #fff;
 }
 .box_kepek  p  {
-	font-family: 'edward', Arial;
+	font-family: 'pt_sans-web-regular-webfont', Arial;
         float: right;
 	text-align: right;
 	margin: 20px 0px 20px 0px;
@@ -107,7 +119,7 @@ input {
 	margin: -40px 0px 0px 10px;
 }
 #galeria-alfejlec {
-	font-family: 'edward', Arial;
+	font-family: 'pt_sans-web-regular-webfont', Arial;
 	color: #231200;
 	margin: 0px 0px 0px 0px;
 	border: 0px solid #c5aa5f;

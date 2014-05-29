@@ -135,3 +135,33 @@ function megerosites_x(torolszam, formnev, termek) {
 		if (answer) { window.location="admin.php?tartalom=admingaleria&kepment=2&csoport="+termek+"&torol="+torolszam;}
 	}
 }
+
+	
+function showNaptar(str, str2, str3)
+		{
+		if (str=="")
+		  {
+		  document.getElementById("txtNaptar").innerHTML="";
+		  return;
+		  }
+		if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.onreadystatechange=function()
+		  {
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+			document.getElementById("txtNaptar").innerHTML=xmlhttp.responseText;
+			//document.getElementById("txtNaptarinp").innerHTML=xmlhttp.responseText;
+			}
+		  }
+			
+		xmlhttp.open("GET","ajax_naptar.php?napt_ev="+str+"&napt_honap="+str2+"&napt_nap="+str3,true);
+		xmlhttp.send();
+		
+}

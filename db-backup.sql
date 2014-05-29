@@ -8,10 +8,12 @@ CREATE TABLE `diakotthon_galeriacsop` (
   PRIMARY KEY (`sorszam`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
 
-INSERT INTO diakotthon_galeriacsop VALUES("1","Diákotthon kivűlről ","1","0");
-INSERT INTO diakotthon_galeriacsop VALUES("2","Diákotthon belülről","2","0");
-INSERT INTO diakotthon_galeriacsop VALUES("3","Rendezvények","3","0");
-INSERT INTO diakotthon_galeriacsop VALUES("4","Ünnepek","4","0");
+INSERT INTO diakotthon_galeriacsop VALUES("1","Intézmény képei","1","0");
+INSERT INTO diakotthon_galeriacsop VALUES("2","Leonardo","2","0");
+INSERT INTO diakotthon_galeriacsop VALUES("103","rendezvények","3","0");
+INSERT INTO diakotthon_galeriacsop VALUES("204","Tata","4","103");
+INSERT INTO diakotthon_galeriacsop VALUES("305","Kömlőd","5","103");
+INSERT INTO diakotthon_galeriacsop VALUES("406","Komárom","6","103");
 
 
 
@@ -26,33 +28,40 @@ CREATE TABLE `diakotthon_galeriakepek` (
   `csoport` varchar(50) COLLATE latin2_hungarian_ci DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `hirdetes_sorszam` (`kepszam`)
-) ENGINE=MyISAM AUTO_INCREMENT=332 DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
 
-INSERT INTO diakotthon_galeriakepek VALUES("1","1","Haz_1.jpg","1","kecskédi családi viskó","1");
-INSERT INTO diakotthon_galeriakepek VALUES("2","2","Haz_2.jpg","2","Barossközi házzzz","1");
-INSERT INTO diakotthon_galeriakepek VALUES("3","3","Haz_3.jpg","3","Tatai ház valahol","1");
-INSERT INTO diakotthon_galeriakepek VALUES("4","4","Haz_4.jpg","4","","1");
-INSERT INTO diakotthon_galeriakepek VALUES("5","5","Haz_5.jpg","5","","1");
-INSERT INTO diakotthon_galeriakepek VALUES("6","6","Haz_6.jpg","6","","1");
-INSERT INTO diakotthon_galeriakepek VALUES("7","7","Haz_7.jpg","7","","1");
-INSERT INTO diakotthon_galeriakepek VALUES("8","8","Haz_8.jpg","8","","1");
-INSERT INTO diakotthon_galeriakepek VALUES("9","9","Haz_9.jpg","9","","1");
-INSERT INTO diakotthon_galeriakepek VALUES("10","10","Lakas_1.jpg","1","","2");
-INSERT INTO diakotthon_galeriakepek VALUES("11","11","Lakas_2.jpg","2","","2");
-INSERT INTO diakotthon_galeriakepek VALUES("12","12","Lakas_3.jpg","1","","4");
-INSERT INTO diakotthon_galeriakepek VALUES("168","157","022.jpg","20","","7");
-INSERT INTO diakotthon_galeriakepek VALUES("320","158","DSC_3684lr.jpg","1","","8");
-INSERT INTO diakotthon_galeriakepek VALUES("321","170","DSC_3685lr.jpg","22","","8");
-INSERT INTO diakotthon_galeriakepek VALUES("322","171","DSC_3689lr.jpg","23","","8");
-INSERT INTO diakotthon_galeriakepek VALUES("323","172","DSC_3692lr.jpg","24","","8");
-INSERT INTO diakotthon_galeriakepek VALUES("324","173","DSC_3697lr.jpg","25","","8");
-INSERT INTO diakotthon_galeriakepek VALUES("325","174","DSC_3700lr.jpg","26","","8");
-INSERT INTO diakotthon_galeriakepek VALUES("326","175","IMG_8733_11lr.jpg","1","","9");
-INSERT INTO diakotthon_galeriakepek VALUES("327","176","DSC_3723lr.jpg","2","","9");
-INSERT INTO diakotthon_galeriakepek VALUES("328","177","DSC_3683lr.jpg","3","","9");
-INSERT INTO diakotthon_galeriakepek VALUES("329","178","IMG_8802_11lr.jpg","20","","7");
-INSERT INTO diakotthon_galeriakepek VALUES("330","179","IMG_8829_11lr.jpg","23","","7");
-INSERT INTO diakotthon_galeriakepek VALUES("331","180","180.jpg","1","március","3");
+INSERT INTO diakotthon_galeriakepek VALUES("1","1","1.jpg","1","Tatai Intézmény","1");
+INSERT INTO diakotthon_galeriakepek VALUES("2","2","2.jpg","1","Leonardo projekt tabló","2");
+INSERT INTO diakotthon_galeriakepek VALUES("4","4","4.jpg","3","Projekt a naptárban","2");
+INSERT INTO diakotthon_galeriakepek VALUES("5","5","5.jpg","4","Projekt a naptárban ismét","2");
+INSERT INTO diakotthon_galeriakepek VALUES("6","6","6.jpg","5","Külföldi újságcikk","2");
+INSERT INTO diakotthon_galeriakepek VALUES("8","7","7.jpg","2","Komáromi Intézmény","1");
+INSERT INTO diakotthon_galeriakepek VALUES("9","8","8.jpg","3","Kömlődi Intézmény","1");
+INSERT INTO diakotthon_galeriakepek VALUES("10","9","9.jpg","1","","204");
+INSERT INTO diakotthon_galeriakepek VALUES("11","10","10.jpg","2","","204");
+INSERT INTO diakotthon_galeriakepek VALUES("12","11","11.jpg","1","","305");
+INSERT INTO diakotthon_galeriakepek VALUES("13","12","12.jpg","2","","305");
+INSERT INTO diakotthon_galeriakepek VALUES("19","14","14.jpg","1","","406");
+INSERT INTO diakotthon_galeriakepek VALUES("18","13","13.jpg","1","","103");
+INSERT INTO diakotthon_galeriakepek VALUES("20","15","15.jpg","2","","406");
+
+
+
+DROP TABLE diakotthon_kepek;
+
+CREATE TABLE `diakotthon_kepek` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `file` varchar(100) COLLATE latin2_hungarian_ci NOT NULL,
+  `folder` varchar(100) COLLATE latin2_hungarian_ci DEFAULT NULL,
+  `title` varchar(200) COLLATE latin2_hungarian_ci DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `status` varchar(1) COLLATE latin2_hungarian_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
+
+INSERT INTO diakotthon_kepek VALUES("1","intezmeny.jpg","","","","1");
+INSERT INTO diakotthon_kepek VALUES("2","2.jpg","","","","");
+INSERT INTO diakotthon_kepek VALUES("3","3.jpg","","","","");
 
 
 
@@ -81,7 +90,7 @@ CREATE TABLE `diakotthon_regisztralt` (
 
 INSERT INTO diakotthon_regisztralt VALUES("0","pczekmany","","0724739e4f7811dd09648d9b205c7d3d","pczekmany@gmail.com","","1","0","","","","","","","","","");
 INSERT INTO diakotthon_regisztralt VALUES("1","bmbtamas","Bombicz Tamás","825389c33a252ee237134596cbc77a77","bombiczt@gmail.com","","0","0","","","","","","","","","");
-INSERT INTO diakotthon_regisztralt VALUES("2","diakotthon","Diakotthon","5B64ECD18C9562A9F6C51C4C61871CCB","info@diakotthon.hu","","1","0","2014-04-01 00:00:00","","","","","","","","");
+INSERT INTO diakotthon_regisztralt VALUES("2","diakotthon","Diakotthon","1a6a2a4609bf828bc56676caafcd55c0","info@diakotthon.hu","","1","0","2014-04-01 00:00:00","","","","","","","","");
 INSERT INTO diakotthon_regisztralt VALUES("3","AdminZoli","Molnár Zoltán","e20ffabe4230eed6ba92c6ee9d9618e4","info@inkozrt.hu","1","1","0","0000-00-00 00:00:00","0000-00-00 00:00:00","","","","","","","");
 
 
@@ -114,22 +123,27 @@ CREATE TABLE `diakotthon_szoveg` (
   KEY `sorszam` (`sorszam`)
 ) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=latin2 COLLATE=latin2_hungarian_ci;
 
-INSERT INTO diakotthon_szoveg VALUES("41","Rólunk","","<h2>R&oacute;lunk</h2>
-<p>Szolg&aacute;ltat&aacute;sainkxxx</p>
-<p>&Aacute;ltal&aacute;nos iskolai k&eacute;pz&eacute;s</p>
-<p>&Eacute;rintettek k&ouml;re: enyhe &eacute;rtelmi fogyat&eacute;kos, k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos, gyeng&eacute;nl&aacute;t&oacute;, enyhe mozg&aacute;skorl&aacute;tozott, k&ouml;zepesen mozg&aacute;skorl&aacute;tozott, Down-szindr&oacute;ma, autista, Williams-szindr&oacute;ma, pszichi&aacute;triai beteg.</p>
-<p>Foglalkoz&aacute;sok: &eacute;nek,zene,t&aacute;nc,kos&aacute;rlabda lovagl&aacute;s, r&ouml;plabda, &uacute;sz&aacute;s, h&aacute;ztart&aacute;si ismeretek, sz&aacute;m&iacute;t&aacute;stechnikai ismeretek eszk&ouml;z, seg&eacute;deszk&ouml;z, k&ouml;nyv k&ouml;lcs&ouml;nz&eacute;se.</p>
-<p>Ter&aacute;pi&aacute;k: dr&aacute;mapedag&oacute;gia, dr&aacute;maj&aacute;t&eacute;k, gy&oacute;gytorna, HRG (hydroterapi&aacute;s rehabilit&aacute;ci&oacute;s gimnasztika) gy&oacute;gylovagl&aacute;s, hippoter&aacute;pia, zeneter&aacute;pia, diszlexia-, diszgr&aacute;fia-, diszcalculiater&aacute;pi&aacute;k, besz&eacute;dfejleszt&eacute;s, logop&eacute;dia, eml&eacute;kezet- &eacute;s figyelem fejleszt&eacute;s gy&oacute;gy&uacute;sz&aacute;s.</p>
-<p>Informatik&aacute;val t&aacute;mogatott k&eacute;pess&eacute;gfejleszt&eacute;s.</p>
-<p>Speci&aacute;lis szakiskolai k&eacute;pz&eacute;s</p>
-<p>&Eacute;rintettek k&ouml;re: enyhe &eacute;rtelmi fogyat&eacute;kos,k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos enyhe mozg&aacute;skorl&aacute;tozott, k&ouml;zepesen mozg&aacute;skorl&aacute;tozott.</p>
-<p>Foglalkoz&aacute;sok: bőrd&iacute;szműves, kert&eacute;szet, sz&aacute;m&iacute;t&aacute;stechnikai ismeretek, munk&aacute;ra felk&eacute;sz&iacute;t&eacute;s.</p>
-<p>&nbsp;</p>
-<p>Ter&aacute;pi&aacute;k: gy&oacute;gylovagl&aacute;s, hippoter&aacute;pia gy&oacute;gy&uacute;sz&aacute;s, koll&eacute;gium, di&aacute;kotthon.</p>
-<p>koll&eacute;giumi, di&aacute;kotthoni ell&aacute;t&aacute;s &Eacute;rintettek k&ouml;re  enyhe &eacute;rtelmi fogyat&eacute;kos k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos gyeng&eacute;nl&aacute;t&oacute; enyhe mozg&aacute;skorl&aacute;tozott k&ouml;zepesen mozg&aacute;skorl&aacute;tozott Down-szindr&oacute;ma autista Williams-szindr&oacute;ma Foglalkoz&aacute;sok  sz&aacute;m&iacute;t&aacute;stechnikai ismeretek szuperv&iacute;zi&oacute; Ter&aacute;pi&aacute;k  j&aacute;t&eacute;kter&aacute;pia j&oacute;ga lak&aacute;sotthonok - I-IV. Ell&aacute;tottak sz&aacute;ma: 40 fő. Ell&aacute;tottak &eacute;letkora: 18 - 24 &eacute;ves korig</p>
-<p>Szoci&aacute;lis szolg&aacute;ltat&aacute;s(ok)  lak&aacute;sotthoni ell&aacute;t&aacute;s &Eacute;rintettek k&ouml;re  enyhe &eacute;rtelmi fogyat&eacute;kos k&ouml;z&eacute;ps&uacute;lyos &eacute;rtelmi fogyat&eacute;kos Foglalkoz&aacute;sok  eg&eacute;szs&eacute;ges &eacute;letm&oacute;dra nevel&eacute;s ment&aacute;lhigi&eacute;n&eacute;s foglalkoz&aacute;s szexu&aacute;lis felvil&aacute;gos&iacute;t&aacute;s t&aacute;nc ker&aacute;mia, &uuml;vegfest&eacute;s fut&aacute;s kos&aacute;rlabda r&ouml;plabda labdar&uacute;g&aacute;s h&aacute;ztart&aacute;si ismeretek szuperv&iacute;zi&oacute; eszk&ouml;z, seg&eacute;deszk&ouml;z, k&ouml;nyv k&ouml;lcs&ouml;nz&eacute;se Ter&aacute;pi&aacute;k  j&aacute;t&eacute;kter&aacute;pia Sindelar-f&eacute;le komplex fejlesztő elj&aacute;r&aacute;s pszichoter&aacute;pia diszlexia-, diszgr&aacute;fia-, diszcalculiater&aacute;pi&aacute;k eml&eacute;kezet- &eacute;s figyelem fejleszt&eacute;s informatik&aacute;val t&aacute;mogatott k&eacute;pess&eacute;gfejleszt&eacute;s Telephelyek  V. Lak&aacute;sotthon</p>","rolunk","0","rolunk","0","1","2","hu","2013-03-09 23:14:24","2013-03-09 23:14:24","0000-00-00","0000-00-00","0","Rólunk","1","0","","");
+INSERT INTO diakotthon_szoveg VALUES("41","Rólunk","","<p>Int&eacute;zm&eacute;ny&uuml;nk &ndash; a <strong>Kom&aacute;rom-Esztergom Megyei &Oacute;voda, &Aacute;ltal&aacute;nos Iskola, Speci&aacute;lis Szakiskola, Koll&eacute;gium &eacute;s Gyermekotthon</strong> &ndash; gy&oacute;gypedag&oacute;giai nevel&eacute;si-oktat&aacute;si, gyermekv&eacute;delmi feladatokat l&aacute;t el. T&ouml;bbc&eacute;l&uacute;, szegreg&aacute;lt int&eacute;zm&eacute;ny, melynek sz&eacute;khelye Tat&aacute;n van, k&eacute;t tagint&eacute;zm&eacute;nye K&ouml;mlőd&ouml;n, illetve Kom&aacute;romban. Fenntart&oacute;nk a Klebelsberg Int&eacute;zm&eacute;nyfenntart&oacute; K&ouml;zpont Tatai Tanker&uuml;lete.</p>
+<p></p>
+<p><strong>K&ouml;mlődi &oacute;vod&aacute;nkban</strong> az &eacute;rtelmileg akad&aacute;lyozott kisgyermekek mellett autista gyermekeket is ell&aacute;tunk.</p>
+<p></p>
+<p>Nyolc &eacute;vfolyamos <strong>&aacute;ltal&aacute;nos iskol&aacute;inkban</strong> az egy&eacute;ni sz&uuml;ks&eacute;gleteket &eacute;s fejlőd&eacute;smenetet figyelembe vevő oktat&aacute;s mellett nagy hangs&uacute;lyt helyez&uuml;nk a k&uuml;l&ouml;nb&ouml;ző habilit&aacute;ci&oacute;s, rehabilit&aacute;ci&oacute;s foglalkoz&aacute;sok megtart&aacute;s&aacute;ra (hydroter&aacute;pia, gy&oacute;gylovagl&aacute;s, logop&eacute;dia, gy&oacute;gytorna, stb.).</p>
+<p></p>
+<p></p>
+<p><strong>Szakiskol&aacute;inkban</strong> 2+2 &eacute;vfolyamos speci&aacute;lis &eacute;s k&eacute;szs&eacute;gfejlesztő speci&aacute;lis szakiskolai k&eacute;pz&eacute;st biztos&iacute;tunk. A tov&aacute;bbtanulni sz&aacute;nd&eacute;koz&oacute; fiatalok kerti munk&aacute;s, bőrt&aacute;rgyk&eacute;sz&iacute;tő, asztalosipari szerelő, lak&aacute;stextil k&eacute;sz&iacute;tő, sz&aacute;m&iacute;t&oacute;g&eacute;pes adatr&ouml;gz&iacute;tő, park&aacute;pol&oacute;, konyhai kiseg&iacute;tő, takar&iacute;t&oacute;i munka szakm&aacute;kra k&eacute;rhetik felv&eacute;tel&uuml;ket. Ezek k&ouml;z&uuml;l az első &ouml;t szakm&aacute;ban <strong>OKJ-s r&eacute;szszakk&eacute;pes&iacute;t&eacute;s </strong>&eacute;rhető el.</p>
+<p></p>
+<p><strong>Koll&eacute;giumaink</strong> a megye ter&uuml;let&eacute;n &eacute;lő h&aacute;tr&aacute;nyos, vagy halmozottan h&aacute;tr&aacute;nyos helyzetű gyermekek elhelyez&eacute;s&eacute;t, nevel&eacute;s&eacute;t biztos&iacute;tja.</p>
+<p></p>
+<p></p>
+<p><strong>Gyermekotthonaink</strong> k&uuml;l&ouml;nleges ell&aacute;t&aacute;st ny&uacute;jtanak az &aacute;tmeneti, illetve tart&oacute;s nevel&eacute;sbe vett, &eacute;p &eacute;rtelmű &eacute;s saj&aacute;tos nevel&eacute;si ig&eacute;nyű gyermekek r&eacute;sz&eacute;re egyar&aacute;nt.</p>
+<p></p>
+<p></p>
+<p>Pedag&oacute;giai Programunk szerint nagy hangs&uacute;lyt helyez&uuml;nk tanul&oacute;ink hasznos <strong>szabadidő elt&ouml;lt&eacute;s&eacute;re</strong>. A tehets&eacute;ggondoz&aacute;s &eacute;s a felz&aacute;rk&oacute;ztat&aacute;s k&uuml;l&ouml;nb&ouml;ző műv&eacute;szeti (&eacute;nek-zene, n&eacute;pt&aacute;nc) sport (atl&eacute;tika, strandr&ouml;plabda, &uacute;sz&aacute;s) &eacute;s egy&eacute;b programok, rendezv&eacute;nyek keret&eacute;n bel&uuml;l val&oacute;sul meg.</p>
+<p></p>
+<p></p>
+<p>&Eacute;vek &oacute;ta sikeresen szerepel&uuml;nk k&uuml;l&ouml;nb&ouml;ző hazai &eacute;s eur&oacute;pai uni&oacute;s p&aacute;ly&aacute;zatokon. Kiemelkednek ezek k&ouml;z&uuml;l a <strong>Leonardo Mobilit&aacute;si</strong>, illetve <strong>T&Aacute;MOP</strong>-os programjaink.</p>","rolunk","0","rolunk","0","1","2","hu","2013-03-09 23:14:24","2013-03-09 23:14:24","0000-00-00","0000-00-00","0","Rólunk","1","0","","");
 INSERT INTO diakotthon_szoveg VALUES("91","Hírek","<p>h&iacute;rek bevezető</p>","","hirek","0","","","0","","hu","","","","","","","0","0","","hirek.php");
-INSERT INTO diakotthon_szoveg VALUES("92","Galéria","Ez itt galéria","","galeria","0","","","","","hu","","","","","","","","","","galeria.php");
+INSERT INTO diakotthon_szoveg VALUES("92","Galéria","<p>Ez itt gal&eacute;ria</p>","","galeria","0","","","0","","hu","","","","","","Galéria","0","0","","galeria.php");
 INSERT INTO diakotthon_szoveg VALUES("93","Kapcsolat","","<h2></h2>
 <h3>El&eacute;rhetős&eacute;gek:</h3>
 <p><br style=\"clear: both;\" /></p>
@@ -167,12 +181,20 @@ INSERT INTO diakotthon_szoveg VALUES("93","Kapcsolat","","<h2></h2>
 <h4>22-es mell&eacute;k</h4>
 <p><br style=\"clear: both;\" /> <br style=\"clear: both;\" /></p>
 <h3>Fax:  +36 34 587-477</h3>","kapcsolat","0","","","0","","hu","","","","","","","0","0","","");
-INSERT INTO diakotthon_szoveg VALUES("94","Címlap","","<h2>&Uuml;dv&ouml;z&ouml;lj&uuml;k!</h2>
-<p>&nbsp;</p>
-<div id=\"cimszoveg\"><img alt=\"intezm&eacute;ny\" class=\"jobbrazart_kep\" src=\"graphics/intezmeny.jpg\" /> A Kom&aacute;rom-Esztergom Megyei &Oacute;voda, &Aacute;ltal&aacute;nos Iskola, Speci&aacute;lis Szakiskola, Koll&eacute;gium &eacute;s Gyermekotthon t&ouml;bbc&eacute;l&uacute;, k&ouml;z&ouml;s igazgat&aacute;s&uacute; k&ouml;zoktat&aacute;si int&eacute;zm&eacute;ny. Feladata a szakmai alapdokumentumban meghat&aacute;rozott nevel&eacute;si-oktat&aacute;si, gyermekv&eacute;delmi tev&eacute;kenys&eacute;gek &eacute;s szolg&aacute;ltat&aacute;sok megval&oacute;s&iacute;t&aacute;sa az int&eacute;zm&eacute;nyi dokumentumokban meghat&aacute;rozottaknak megfelelően: saj&aacute;tos nevel&eacute;si ig&eacute;nyű-tanul&aacute;sban &eacute;s &eacute;rtelmileg akad&aacute;lyozott, autista gyermekek <br /> - &oacute;vodai nevel&eacute;se,<br /> - &aacute;ltal&aacute;nos iskolai nevel&eacute;se-oktat&aacute;sa,<br /> - szakiskolai k&eacute;pz&eacute;se, /speci&aacute;lis szakiskolai, k&eacute;szs&eacute;gfejlesztő speci&aacute;lis szakiskolai/<br /> - koll&eacute;giumi ell&aacute;t&aacute;sa,<br /> - gyermekv&eacute;delmi szakell&aacute;t&aacute;sa.</div>
-<p>...</p>
-<p>&nbsp;</p>","cimlap","0","","","0","","hu","","","","","","","0","0","","");
-INSERT INTO diakotthon_szoveg VALUES("95","Utazás","<p>Elutaztunk Br&uuml;sszelbe...</p>","<p>Itt pedig hosszan &iacute;runk r&oacute;la</p>","","0","","","1","","hu","2014-05-01 00:00:00","","","","","","2","0","","");
+INSERT INTO diakotthon_szoveg VALUES("94","Üdvözöljük!","","<p><img alt=\"intezmény\" class=\"jobbrazart_kep\" src=\"graphics/intezmeny.jpg\" /></p>
+<p style=\"text-align: justify;\">Intézményünk – a <strong>Komárom-Esztergom Megyei Óvoda, Általános Iskola, Speciális Szakiskola, Kollégium és Gyermekotthon</strong> – gyógypedagógiai nevelési-oktatási, gyermekvédelmi feladatokat lát el. Többcélú, szegregált intézmény, melynek székhelye Tatán van, két tagintézménye Kömlődön, illetve Komáromban. Fenntartónk a Klebelsberg Intézményfenntartó Központ Tatai Tankerülete.</p>
+<p style=\"text-align: justify;\"><strong>Kömlődi óvodánkban</strong> az értelmileg akadályozott kisgyermekek mellett autista gyermekeket is ellátunk.</p>
+<p style=\"text-align: justify;\">Nyolc évfolyamos <strong>általános iskoláinkban</strong> az egyéni szükségleteket és fejlődésmenetet figyelembe vevő oktatás mellett nagy hangsúlyt helyezünk a különböző habilitációs, rehabilitációs foglalkozások megtartására (hydroterápia, gyógylovaglás, logopédia, gyógytorna, stb.).</p>
+<p><img class=\"balrarazart_kep\" height=\"225\" src=\"images/2.jpg\" style=\"text-align: justify;\" width=\"300\" /></p>
+<p style=\"text-align: justify;\"><strong>Szakiskoláinkban</strong> 2+2 évfolyamos speciális és készségfejlesztő speciális szakiskolai képzést biztosítunk. A továbbtanulni szándékozó fiatalok kerti munkás, bőrtárgykészítő, asztalosipari szerelő, lakástextil készítő, számítógépes adatrögzítő, parkápoló, konyhai kisegítő, takarítói munka szakmákra kérhetik felvételüket. Ezek közül az első öt szakmában <strong>OKJ-s részszakképesítés </strong>érhető el.</p>
+<p style=\"text-align: justify;\"><strong>Kollégiumaink</strong> a megye területén élő hátrányos, vagy halmozottan hátrányos helyzetű gyermekek elhelyezését, nevelését biztosítja.</p>
+<p style=\"text-align: justify;\"><strong>Gyermekotthonaink</strong> különleges ellátást nyújtanak az átmeneti, illetve tartós nevelésbe vett, ép értelmű és sajátos nevelési igényű gyermekek részére egyaránt.</p>
+<p style=\"text-align: justify;\">Pedagógiai Programunk szerint nagy hangsúlyt helyezünk tanulói</p>
+<p><img class=\"jobbrazart_kep\" height=\"217\" src=\"images/3.jpg\" title=\"Komlod\" width=\"300\" /></p>
+<p style=\"text-align: justify;\">nk hasznos <strong>szabadidő eltöltésére</strong>. A tehetséggondozás és a felzárkóztatás különböző művészeti (ének-zene, néptánc) sport (atlétika, strandröplabda, úszás) és egyéb programok, rendezvények keretén belül valósul meg.</p>
+<p style=\"text-align: justify;\">Évek óta sikeresen szerepelünk különböző hazai és európai uniós pályázatokon. Kiemelkednek ezek közül a <strong>Leonardo Mobilitá</strong><strong><br />si</strong>, illetve <strong>TÁMOP</strong>-os programjaink. ...</p>","cimlap","0","","","0","","hu","","","2014-05-30","","","","0","0","","");
+INSERT INTO diakotthon_szoveg VALUES("95","Utazás","<p>Elutaztunk &Iacute;rorsz&aacute;gba...</p>","<p>Az &bdquo;Eg&eacute;szs&eacute;g? Term&eacute;szetesen!&rdquo; c&iacute;mű LEONARDO DA VINCI VETPRO projekt&uuml;nk keret&eacute;n bel&uuml;l szakk&eacute;pz&eacute;si szakemberek 10 napos  tanulm&aacute;ny&uacute;tj&aacute;t val&oacute;s&iacute;tottuk meg int&eacute;zm&eacute;ny&uuml;nk &uacute;j partner&eacute;n&eacute;l, az  &iacute;rorsz&aacute;gi Knockvicar Organic Garden-n&eacute;l. <br /><br /> Az egy&uuml;ttműk&ouml;d&eacute;s szem&eacute;lyes szakmai kapcsolat &uacute;tj&aacute;n j&ouml;tt l&eacute;tre.<br /><br /> A projektben 8 fő speci&aacute;lis k&eacute;pes&iacute;t&eacute;sű szakember &ndash; gy&oacute;gypedag&oacute;gus,  szakoktat&oacute; - vett r&eacute;szt: Becs&aacute;kn&eacute; Szőke &Eacute;va, Sz&aacute;mn&eacute; Maurer Hajnalka,  Nagy L&aacute;szl&oacute;, M&aacute;rkusn&eacute; Jancs&oacute; Ildik&oacute;, L&eacute;vain&eacute; Bicz&oacute; Eszter, Lengyel  Laura, Hegedűs Szandra, Jakab &Aacute;rp&aacute;d. A kedvezm&eacute;nyezettek k&ouml;z&ouml;tt voltak  tapasztalt p&aacute;ly&aacute;z&oacute;k &eacute;s mentor&aacute;lt pedag&oacute;gusok.<br /><br /> A projekt fő c&eacute;ljai: minős&iacute;tett organikus biokert&eacute;szet műk&ouml;d&eacute;s&eacute;nek, az  &ouml;kotermeszt&eacute;s tanulm&aacute;nyoz&aacute;sa; vegyszermentes, k&ouml;rnyezetk&iacute;m&eacute;lő m&oacute;don  elő&aacute;ll&iacute;tott bioterm&eacute;kek felhaszn&aacute;l&aacute;s&aacute;nak, piaci &eacute;rt&eacute;kes&iacute;t&eacute;si  gyakorlat&aacute;nak &iacute;rorsz&aacute;gi tapasztalatai; a fogad&oacute; int&eacute;zm&eacute;ny k&eacute;pz&eacute;seinek,  valamint az &iacute;rorsz&aacute;gi szakk&eacute;pz&eacute;s tanulm&aacute;nyoz&aacute;sa, k&uuml;l&ouml;n&ouml;s tekintettel a  fogyat&eacute;kkal &eacute;lő fiatalok szakk&eacute;pz&eacute;s&eacute;re, munk&aacute;ba &aacute;ll&iacute;t&aacute;s&aacute;ra. <br /><br /> C&eacute;l egy 30 &oacute;r&aacute;s tanfolyamon a biotermeszt&eacute;ssel kapcsolatos ismereteink  bőv&iacute;t&eacute;se, amellyel az iskol&aacute;nk park&eacute;p&iacute;tő &eacute;s kerti munk&aacute;s szakm&aacute;inak  k&eacute;pz&eacute;si tananyag&aacute;t fejleszthetj&uuml;k.</p>
+<p>A tanulm&aacute;ny&uacute;t munkaprogramj&aacute;t a fogad&oacute; int&eacute;zm&eacute;nnyel folyamatosan  egyeztetve alak&iacute;tottuk ki. A kiutaz&aacute;s előtti felk&eacute;sz&iacute;t&eacute;s k&eacute;t ter&uuml;letre -  angol szaknyelvi, &eacute;s biokert&eacute;sz szakmai alapoz&oacute; &ndash; terjedt ki. <br /><br /> A kitűz&ouml;tt c&eacute;lokat &eacute;s a munkaprogramban foglaltakat teljes k&ouml;rűen  megval&oacute;s&iacute;tottuk. A tervezetten t&uacute;l egy&eacute;b olyan szakmai kultur&aacute;lis,  szabadidős programokon vett&uuml;nk r&eacute;szt, amely hozz&aacute;seg&iacute;tett benn&uuml;nket  &Iacute;rorsz&aacute;g f&ouml;ldrajzi, kultur&aacute;lis &eacute;rt&eacute;keinek, t&aacute;rsadalmi saj&aacute;toss&aacute;gainak,  az ott &eacute;lő emberek hagyom&aacute;nyainak, szok&aacute;sainak megismer&eacute;s&eacute;hez. <br /><br /> A mobilit&aacute;si program r&eacute;sztvevői szakmai, nyelvi, interkultur&aacute;lis  ter&uuml;leteken egyar&aacute;nt fejlődtek. Az eredm&eacute;nyek sokr&eacute;tűek, melynek  terjeszt&eacute;se, be&eacute;p&iacute;t&eacute;se int&eacute;zm&eacute;ny&uuml;nk szakk&eacute;pz&eacute;si strukt&uacute;r&aacute;j&aacute;ba, adott  szakm&aacute;k tananyag&aacute;nak tematik&aacute;j&aacute;ba, int&eacute;zm&eacute;nyi szab&aacute;lyz&oacute;iba az  elk&ouml;vetkezendő időszak feladata lesz. <br /><br /> A Knockvicar Organic Garden-n&eacute;l teljes&iacute;tett 30 &oacute;r&aacute;s szakmai elm&eacute;leti  tanfolyam &eacute;s gyakorlati tapasztalatszerz&eacute;s megval&oacute;sul&aacute;s&aacute;t a k&uuml;ldő &eacute;s a  fogad&oacute; int&eacute;zm&eacute;ny szakmai vezetői egyar&aacute;nt nyomon k&ouml;vett&eacute;k &eacute;s &eacute;rt&eacute;kelt&eacute;k.  <br /><br /> Ez volt az első olyan Leonardo mobilit&aacute;si p&aacute;ly&aacute;zatunk, melynek teljes&iacute;t&eacute;s&eacute;t Europass Mobility igazolv&aacute;nnyal ismert&eacute;k el. <br /><br /> A tanulm&aacute;ny&uacute;t tapasztalatait folyamatosan terjesztj&uuml;k. Sz&eacute;lesk&ouml;rű  t&aacute;rsadalmi szeml&eacute;letv&aacute;lt&aacute;sra van sz&uuml;ks&eacute;g a k&ouml;rnyezettudatoss&aacute;gra, &eacute;s az  eg&eacute;szs&eacute;ges &eacute;letm&oacute;dra nevel&eacute;s ter&eacute;n, amelyhez mi is hozz&aacute; k&iacute;v&aacute;nunk  j&aacute;rulni azzal, hogy Pedag&oacute;giai Programunkba, valamint int&eacute;zm&eacute;ny&uuml;nk  mindennapi &eacute;let&eacute;be be&eacute;p&iacute;tj&uuml;k az &iacute;rorsz&aacute;gi tanulm&aacute;ny&uacute;t tapasztalatait.</p>","","0","","","1","","hu","2014-05-01 00:00:00","","2013-08-11","2013-08-21","","","2","0","","");
 
 
 

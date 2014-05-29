@@ -3,10 +3,10 @@ session_start();
 require_once('parameters.php');
 require_once('functions.php');
 require_once('class.php');
+require_once('adatkapcsolat.php');
 
-
-$adatkapcsolat = new data_connect;
-$adatkapcsolat->connect();
+#$adatkapcsolat = new data_connect;
+#$adatkapcsolat->connect();
 
 $user = new user;
 $user->login();

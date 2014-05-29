@@ -11,6 +11,7 @@ $cikk = new cikkszoveg();
 
 if ($page){
    $cikk->mysql_read($page, 'hu');
+   
 } else {
     if (!$menu){
         $cikk->mysql_read('cimlap', 'hu');   
@@ -19,8 +20,14 @@ if ($page){
 
 if (!$menu){ 
     $tartalom = '<h1>'.$cikk->cim .'</h1>'. $cikk->tartalom;
+   
+    if ($cikk->hir == '1'){
+        $visszagomb = '<a href="?page=hirek" class="visszagomb">Vissza</a>';
+        $tartalom .= $visszagomb;
+    }
 }
 
 if ($cikk->php_file){
   require_once($cikk->php_file);
+ 
 }

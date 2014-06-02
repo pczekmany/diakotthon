@@ -28,7 +28,7 @@ If ($_POST['cim'] != "") {
 			else {$ment_hir = 0;}
 		if ($_POST[check_aktiv] == 'on'){$ment_aktiv = 0;}
 			else {$ment_aktiv = 1;}
-		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_szoveg SET tartalom='$_POST[content]',php_file='$_POST[php_file]', bevezeto='$_POST[bevezeto]', cim='$_POST[cim]', menunev='$_POST[menunev]', sorrend='$_POST[sorrend]', nyelv='hu', archiv='$ment_aktiv', menu_fent='$ment_menu', hir='$ment_hir', hivatkozas='$_POST[hivatkozas]' WHERE sorszam='$_POST[sorszam]'";
+		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_szoveg SET tartalom='$_POST[content]',php_file='$_POST[php_file]', bevezeto='$_POST[bevezeto]', cim='$_POST[cim]', menunev='$_POST[menunev]', sorrend='$_POST[sorrend]', nyelv='hu', archiv='$ment_aktiv', menu_fent='$ment_menu', hir='$ment_hir', hivatkozas='$_POST[hivatkozas]', esemeny='$_POST[datumtol]', esemeny_ig='$_POST[datumig]' WHERE sorszam='$_POST[sorszam]'";
 		mysql_query($sql2);
 	} else {
 		$sql2 = "UPDATE ".$_SESSION[adatbazis_etag]."_kategoriak SET szoveg='$_POST[content]' WHERE sorszam='$_REQUEST[kategoria]'";
@@ -38,7 +38,7 @@ If ($_POST['cim'] != "") {
 
 If ($_REQUEST['kategoria'] == "") {
 	If ($_REQUEST[valaszt] != ''){
-		$r = mysql_query("SELECT tartalom, sorszam, cim, menunev, nyelv, menu_fent, archiv, sorrend, hir, bevezeto, hivatkozas, php_file FROM ".$_SESSION[adatbazis_etag]."_szoveg WHERE sorszam = $_REQUEST[valaszt]");
+		$r = mysql_query("SELECT tartalom, sorszam, cim, menunev, nyelv, menu_fent, archiv, sorrend, hir, bevezeto, hivatkozas, php_file, esemeny, esemeny_ig FROM ".$_SESSION[adatbazis_etag]."_szoveg WHERE sorszam = $_REQUEST[valaszt]");
 		$h = mysql_fetch_row($r);  
 		$szoveg_tartalom = $h[0];
 		$szoveg_nyelv = $h[4];
@@ -47,6 +47,8 @@ If ($_REQUEST['kategoria'] == "") {
 		$szoveg_hir = $h[8];
 		$szoveg_bevezeto = $h[9];
 		$szoveg_hivatkozas = $h[10];
+                $szoveg_esemeny = $h[12];
+                $szoveg_esemeny_ig = $h[13];
 		if (($szoveg_nyelv == 'hu') OR ($szoveg_nyelv == '')){ $cikknyelvcombo_hu = 'selected="selected"';}
 		if ($szoveg_nyelv == 'en') { $cikknyelvcombo_en = 'selected="selected"';}
 		if ($szoveg_menu == 1) {$cikkmenu_check = 'checked="checked"';}
@@ -66,7 +68,7 @@ else {
 	$menu_nev= '';
 }
 
-$result = mysql_query("SELECT sorszam, cim, nyelv, archiv, menu_fent, sorrend, hir FROM ".$_SESSION[adatbazis_etag]."_szoveg ORDER BY sorrend");
+$result = mysql_query("SELECT sorszam, cim, nyelv, archiv, menu_fent, sorrend, hir, esemeny, esemeny_ig FROM ".$_SESSION[adatbazis_etag]."_szoveg ORDER BY sorrend");
 $sor = 0;
 while ($next_element = mysql_fetch_array($result)){
 	$sor++;
@@ -137,12 +139,14 @@ if (($_REQUEST['valaszt'] == '') OR ($_REQUEST['check_torles'] == "on")){
 			<tr><td><input name="sorszam" type="text" value="' . $h[1] . '" size="2" style="display:none;" /></td></tr>
 			'.$menu_nev.'
 			<tr><td>Sorrend:</td><td><input name="sorrend" type="text" value="' . $h[7] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
-	  	    <tr><td>Hivatkozas:</td><td><input name="hivatkozas" type="text" value="' . $h[10] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
+                        <tr><td>Hivatkozas:</td><td><input name="hivatkozas" type="text" value="' . $h[10] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
 			<tr><td>PHP fájl:</td><td><input name="php_file" type="text" value="' . $h[11] . '" onkeyup="numerikusCheck(szoveg.sorrend)" /></span><br style="clear: both;"/></td></tr>
 			<tr><td>Menü elem:</td><td><input name="check_menu" type="checkbox" '.$cikkmenu_check.'/></td></tr>
 			<tr><td>Hír:</td><td><input name="check_hir" type="checkbox" '.$cikkhir_check.'/></td></tr>
 			<tr><td>Aktív:</td><td><input name="check_aktiv" type="checkbox" '.$cikkarchiv_check.'/></td></tr>
 			<tr><td>Végleges törlés:</td><td><input name="check_torles" type="checkbox" onclick="megerosites_x('.$h[1].', \'szoveg\')" /></td></tr>
+                        <tr><td>Dátum -tól (Hír esetén):</td><td><input name="datumtol" type="text" value="' . $h[12] . '"/></td></tr>
+                        <tr><td>Dátum -ig (Hír esetén):</td><td><input name="datumig" type="text" value="' . $h[13] . '"/></td></tr>
 		</table>
 		</div>
 		
@@ -158,12 +162,12 @@ if (($_REQUEST['valaszt'] == '') OR ($_REQUEST['check_torles'] == "on")){
 		</div>
 		<div id="admin_cikktermek" style="display: none;">
 		<div class="a_form_beldiv">
-			<p>Term�kek kiv�laszt�sa a h�rlev�lhez</p>
+			<p>Termékek kiválasztása a hírlevélhez</p>
 			<br style="clear:both;" />
 		</div>
 		</div>
 	</form>';
 }
 
-If ($kikapcs == 1) {$admin_torzs = '<div class="tabla_k">Ehhez a men�ponthoz nem tartozik szerkeszthet� tartalom!</div>';}
+If ($kikapcs == 1) {$admin_torzs = '<div class="tabla_k">Ehhez a menüponthoz nem tartozik szerkeszthető tartalom!</div>';}
 ?>
